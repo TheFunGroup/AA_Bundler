@@ -1,13 +1,13 @@
 # TO RUN
 
-1. er the project directory and run
-```
+1. Enter the project directory and run
+```console
 chmod +x ./init.sh
 ./init.sh
 ```
 2. Close the terminal
 3. Now whenever you want to run the bundler from anywhere run
-```
+```console
 runbundler
 ```
 
