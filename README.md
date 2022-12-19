@@ -1,3 +1,16 @@
+# TO RUN
+
+1. er the project directory and run
+```
+chmod +x ./init.sh
+./init.sh
+```
+2. Close the terminal
+3. Now whenever you want to run the bundler from anywhere run
+```
+runbundler
+```
+
 # EIP4337 reference modules
 
 ## Bundler
