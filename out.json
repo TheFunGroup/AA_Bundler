@@ -1,0 +1,41 @@
+{
+    "filters": {
+        "forAll": [
+            {
+                "valRange": {
+                    "range": [
+                        1000
+                    ],
+                    "cur": "USD"
+                },
+                "require": [
+                    {
+                        "type": "KYC",
+                        "level": "ZK"
+                    },
+                    {
+                        "type": "2FA",
+                        "provider": "authy",
+                        "auth": {
+                            "api-key": ""
+                        }
+                    },
+                    {
+                        "type": "PHONE"
+                    },
+                    {
+                        "type": "CODE",
+                        "tries": 1
+                    },
+                    {
+                        "type": "MUTLISIG",
+                        "signers": [
+                            "0x66fcfe21bcEEB228A3d2b5135f7db2a25Ed6733C",
+                            "0x41eebE1971140993c855F03579db4063C64939ad"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

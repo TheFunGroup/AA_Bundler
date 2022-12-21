@@ -13,9 +13,11 @@ if (mnemonicFileName != null && fs.existsSync(mnemonicFileName)) {
   mnemonic = fs.readFileSync(mnemonicFileName, 'ascii').trim()
 }
 
+
+
 const infuraUrl = (name: string): string => `https://${name}.infura.io/v3/${process.env.INFURA_ID}`
 
-function getNetwork (url: string): NetworkUserConfig {
+function getNetwork(url: string): NetworkUserConfig {
   return {
     url,
     accounts: {
@@ -24,7 +26,7 @@ function getNetwork (url: string): NetworkUserConfig {
   }
 }
 
-function getInfuraNetwork (name: string): NetworkUserConfig {
+function getInfuraNetwork(name: string): NetworkUserConfig {
   return getNetwork(infuraUrl(name))
 }
 

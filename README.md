@@ -1,8 +1,29 @@
 # TO RUN
+## AWS
+1. SSH into EC2 Server with authenticated credentials
+2. Create a ***screen*** session
+```
+screen
+```
+3. Run:
+```
+chmod +x ./initssh.sh
+./initssh.sh
+source ~/.zshrc
+loadbundler
+```
+4. Type these keys in order: _Ctrl a Shift {forward slash}_. This will create a white line in the center.
+5. Then type these keys: _Ctrl Tab Ctrl a Ctrl c_.
+6. Then run
+```
+runbundler
+```
+
+## MAC
 
 1. Enter the project directory and run
 ```console
-chmod +x ./init.sh
+chmod +x ./initssh.sh
 ./init.sh
 ```
 2. Close the terminal
