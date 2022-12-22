@@ -1,6 +1,10 @@
 # TO RUN
 ## AWS
 1. SSH into EC2 Server with authenticated credentials
+```
+ssh -i {authfile}.pem ec2-user@ec2-35-90-110-76.us-west-2.compute.amazonaws.com
+
+```
 2. Create a ***screen*** session
 ```
 screen

@@ -1,7 +1,7 @@
 {
   "gasFactor": "1",
   "port": "3000",
-  "network": "http://localhost:8545",
+  "network": "https://rpc.ankr.com/eth_goerli",
   "entryPoint": "0x2DF1592238420ecFe7f2431360e224707e77fA0E",
   "beneficiary": "0xd21934eD8eAf27a67f0A70042Af50A1D6d195E81",
   "minBalance": "1",

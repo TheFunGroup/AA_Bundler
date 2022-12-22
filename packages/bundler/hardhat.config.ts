@@ -12,10 +12,15 @@ let mnemonic = 'test '.repeat(11) + 'junk'
 if (mnemonicFileName != null && fs.existsSync(mnemonicFileName)) {
   mnemonic = fs.readFileSync(mnemonicFileName, 'ascii').trim()
 }
+interface RPCStore {
+  [network: string]: string
+}
 
+const rpcs: RPCStore = {
+  goerli: "https://rpc.ankr.com/eth_goerli"
+}
 
-
-const infuraUrl = (name: string): string => `https://${name}.infura.io/v3/${process.env.INFURA_ID}`
+const infuraUrl = (name: string): string => rpcs[name]
 
 function getNetwork(url: string): NetworkUserConfig {
   return {

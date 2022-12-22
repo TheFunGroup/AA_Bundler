@@ -23,10 +23,10 @@ const deployEP: DeployFunction = async function (hre: HardhatRuntimeEnvironment)
   }
 
   const net = await hre.ethers.provider.getNetwork()
-  if (net.chainId !== 1337 && net.chainId !== 31337) {
-    console.log('NOT deploying EntryPoint. use pre-deployed entrypoint')
-    return
-  }
+  // if (net.chainId !== 1337 && net.chainId !== 31337) {
+  //   console.log('NOT deploying EntryPoint. use pre-deployed entrypoint')
+  //   return
+  // }
 
   const accounts = await hre.ethers.provider.listAccounts()
   const deployer = accounts[0]
