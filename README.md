@@ -1,4 +1,10 @@
-# TO RUN
+# Quickstart
+- If the AWS is not currently active then simply run:
+```
+quickrunbundler
+```
+
+# TO Initialize
 ## AWS
 1. SSH into EC2 Server with authenticated credentials
 ```
