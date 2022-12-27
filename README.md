@@ -4,7 +4,7 @@
 quickrunbundler
 ```
 
-# TO Initialize
+# To Initialize
 ## AWS
 1. SSH into EC2 Server with authenticated credentials
 ```
