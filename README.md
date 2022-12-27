@@ -1,3 +1,7 @@
+# Info
+
+goerli bundler URI: http://35.90.110.76:3000/
+
 # Quickstart
 - If the AWS is not currently active then simply run:
 ```
