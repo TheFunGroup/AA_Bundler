@@ -6,7 +6,15 @@ runbundler () {
 
 loadbundler (){
         cd $BUNDLER
-        yarn && yarn preprocess 
+        
         cd packages/bundler/
         yarn hardhat-node
 }
+
+rungoerli(){
+        cd $BUNDLER
+        yarn && yarn preprocess 
+        cd packages/bundler/
+        yarn run bundler --network goerli
+}
+

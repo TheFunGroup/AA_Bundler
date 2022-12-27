@@ -16,7 +16,7 @@ export class BundlerServer {
   app: Express
   private readonly httpServer: Server
 
-  constructor (
+  constructor(
     readonly methodHandler: UserOpMethodHandler,
     readonly config: BundlerConfig,
     readonly provider: Provider,
@@ -32,21 +32,21 @@ export class BundlerServer {
     // eslint-disable-next-line @typescript-eslint/no-misused-promises
     this.app.post('/rpc', this.rpc.bind(this))
 
-    this.httpServer = this.app.listen(this.config.port)
+    this.httpServer = this.app.listen(3000, "0.0.0.0", () => { console.log("listen") })
     this.startingPromise = this._preflightCheck()
   }
 
   startingPromise: Promise<void>
 
-  async asyncStart (): Promise<void> {
+  async asyncStart(): Promise<void> {
     await this.startingPromise
   }
 
-  async stop (): Promise<void> {
+  async stop(): Promise<void> {
     this.httpServer.close()
   }
 
-  async _preflightCheck (): Promise<void> {
+  async _preflightCheck(): Promise<void> {
     if (await this.provider.getCode(this.config.entryPoint) === '0x') {
       this.fatal(`entrypoint not deployed at ${this.config.entryPoint}`)
     }
@@ -60,16 +60,16 @@ export class BundlerServer {
     }
   }
 
-  fatal (msg: string): never {
+  fatal(msg: string): never {
     console.error('FATAL:', msg)
     process.exit(1)
   }
 
-  intro (req: Request, res: Response): void {
+  intro(req: Request, res: Response): void {
     res.send(`Account-Abstraction Bundler v.${erc4337RuntimeVersion}. please use "/rpc"`)
   }
 
-  async rpc (req: Request, res: Response): Promise<void> {
+  async rpc(req: Request, res: Response): Promise<void> {
     const {
       method,
       params,
@@ -99,7 +99,7 @@ export class BundlerServer {
     }
   }
 
-  async handleMethod (method: string, params: any[]): Promise<void> {
+  async handleMethod(method: string, params: any[]): Promise<void> {
     let result: any
     switch (method) {
       case 'eth_chainId':
