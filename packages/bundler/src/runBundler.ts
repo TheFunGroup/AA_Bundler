@@ -98,6 +98,7 @@ export async function runBundler (argv: string[], overrideExit = true): Promise<
   showStackTraces = programOpts.showStackTraces
 
   console.log('command-line arguments: ', program.opts())
+  // "network": "https://rpc.ankr.com/eth_goerli",
 
   const config = resolveConfiguration(programOpts)
   if (programOpts.createMnemonic != null) {

@@ -18,7 +18,7 @@ const debug = Debug('aa.handler.userop')
 const HEX_REGEX = /^0x[a-fA-F\d]*$/i
 
 export class UserOpMethodHandler {
-  constructor (
+  constructor(
     readonly provider: Provider,
     readonly signer: Wallet | JsonRpcSigner,
     readonly config: BundlerConfig,
@@ -29,7 +29,7 @@ export class UserOpMethodHandler {
 
   clientVersion?: string
 
-  async isGeth (): Promise<boolean> {
+  async isGeth(): Promise<boolean> {
     if (this.clientVersion == null) {
       this.clientVersion = await (this.provider as JsonRpcProvider).send('web3_clientVersion', [])
     }
@@ -37,11 +37,11 @@ export class UserOpMethodHandler {
     return this.clientVersion?.match('Geth') != null
   }
 
-  async getSupportedEntryPoints (): Promise<string[]> {
+  async getSupportedEntryPoints(): Promise<string[]> {
     return [this.config.entryPoint]
   }
 
-  async selectBeneficiary (): Promise<string> {
+  async selectBeneficiary(): Promise<string> {
     const currentBalance = await this.provider.getBalance(this.signer.getAddress())
     let beneficiary = this.config.beneficiary
     // below min-balance redeem to the signer, to keep it active.
@@ -52,7 +52,7 @@ export class UserOpMethodHandler {
     return beneficiary
   }
 
-  async validateUserOperation (userOp1: UserOperationStruct, requireSignature = true): Promise<void> {
+  async validateUserOperation(userOp1: UserOperationStruct, requireSignature = true): Promise<void> {
     // minimal sanity check: userOp exists, and all members are hex
     requireCond(userOp1 != null, 'No UserOperation param')
     const userOp = await resolveProperties(userOp1) as any
@@ -76,7 +76,7 @@ export class UserOpMethodHandler {
    * @param userOp1
    * @param entryPointInput
    */
-  async simulateUserOp (userOp1: UserOperationStruct, entryPointInput: string): Promise<void> {
+  async simulateUserOp(userOp1: UserOperationStruct, entryPointInput: string): Promise<void> {
     const userOp = deepHexlify(await resolveProperties(userOp1))
 
     await this.validateUserOperation(userOp, false)
@@ -133,7 +133,7 @@ export class UserOpMethodHandler {
     }
   }
 
-  async sendUserOperation (userOp1: UserOperationStruct, entryPointInput: string): Promise<string> {
+  async sendUserOperation(userOp1: UserOperationStruct, entryPointInput: string): Promise<string> {
     const userOp = await resolveProperties(userOp1)
     if (entryPointInput.toLowerCase() !== this.config.entryPoint.toLowerCase()) {
       throw new Error(`The EntryPoint at "${entryPointInput}" is not supported. This bundler uses ${this.config.entryPoint}`)
@@ -154,7 +154,7 @@ export class UserOpMethodHandler {
       throw new Error(`userOp.preVerificationGas too low: expected ${expectedPreVerificationGas} but got ${preVerificationGas}`)
     }
 
-    const gasLimit = undefined
+    let gasLimit = userOp.callGasLimit == 500000 ? 500000 : undefined
     debug('using gasLimit=', gasLimit)
     await this.entryPoint.handleOps([userOp], beneficiary, { gasLimit }).catch(rethrowError)
 
@@ -162,12 +162,12 @@ export class UserOpMethodHandler {
     return userOpHash
   }
 
-  async _getUserOperationEvent (userOpHash: string): Promise<UserOperationEventEvent> {
+  async _getUserOperationEvent(userOpHash: string): Promise<UserOperationEventEvent> {
     const event = await this.entryPoint.queryFilter(this.entryPoint.filters.UserOperationEvent(userOpHash))
     return event[0]
   }
 
-  async getUserOperationReceipt (userOpHash: string): Promise<any> {
+  async getUserOperationReceipt(userOpHash: string): Promise<any> {
     requireCond(userOpHash?.toString()?.match(HEX_REGEX) != null, 'Missing/invalid userOpHash', -32601)
     const event = await this._getUserOperationEvent(userOpHash)
     if (event == null) {
@@ -179,7 +179,7 @@ export class UserOpMethodHandler {
     return deepHexlify(receipt)
   }
 
-  async getUserOperationTransactionByHash (userOpHash: string): Promise<any> {
+  async getUserOperationTransactionByHash(userOpHash: string): Promise<any> {
     requireCond(userOpHash?.toString()?.match(HEX_REGEX) != null, 'Missing/invalid userOpHash', -32601)
     const event = await this._getUserOperationEvent(userOpHash)
     if (event == null) {
