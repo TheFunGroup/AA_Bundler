@@ -3,7 +3,7 @@ loadbundler () {
         do script "
         sleep 2
         cd $BUNDLER/packages/bundler/
-        yarn hardhat-deploy --network goerli 
+        yarn hardhat-deploy --network hardhat 
         yarn run bundler"
     end tell'
 }

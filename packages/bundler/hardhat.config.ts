@@ -7,7 +7,7 @@ import fs from 'fs'
 import { HardhatUserConfig } from 'hardhat/config'
 import { NetworkUserConfig } from 'hardhat/src/types/config'
 
-const mnemonicFileName = process.env.MNEMONIC_FILE
+const mnemonicFileName = null//process.env.MNEMONIC_FILE
 let mnemonic = 'test '.repeat(11) + 'junk'
 if (mnemonicFileName != null && fs.existsSync(mnemonicFileName)) {
   mnemonic = fs.readFileSync(mnemonicFileName, 'ascii').trim()
@@ -17,7 +17,8 @@ interface RPCStore {
 }
 
 const rpcs: RPCStore = {
-  goerli: "https://rpc.ankr.com/eth_goerli"
+  goerli: "https://eth-goerli.public.blastapi.io",
+  fuji: "https://api.avax-test.network/ext/bc/C/rpc"
 }
 
 const infuraUrl = (name: string): string => rpcs[name]
@@ -45,7 +46,8 @@ const config: HardhatUserConfig = {
       url: 'http://localhost:8545/',
       saveDeployments: false
     },
-    goerli: getInfuraNetwork('goerli')
+    goerli: getInfuraNetwork('goerli'),
+    fuji: getInfuraNetwork('fuji'),
   },
   solidity: {
     version: '0.8.15',

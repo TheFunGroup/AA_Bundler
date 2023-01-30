@@ -9,7 +9,7 @@ const fundsigner: DeployFunction = async function (hre: HardhatRuntimeEnvironmen
   const provider = hre.ethers.provider
   const signer = provider.getSigner()
   const signerBalance = await provider.getBalance(signer.getAddress())
-  const account = '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266'
+  const account = signer._address
   const bal = await provider.getBalance(account)
   if (bal.lt(parseEther('1')) && signerBalance.gte(parseEther('10000'))) {
     console.log('funding hardhat account', account)

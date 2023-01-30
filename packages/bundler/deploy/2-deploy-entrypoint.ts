@@ -11,14 +11,14 @@ const deployEP: DeployFunction = async function (hre: HardhatRuntimeEnvironment)
   try {
     await hre.deployments.deploy(
       'EntryPoint', {
-        from: ethers.constants.AddressZero,
-        args: [PAYMASTER_STAKE, UNSTAKE_DELAY_SEC],
-        deterministicDeployment: true,
-        log: true
-      })
+      from: ethers.constants.AddressZero,
+      args: [PAYMASTER_STAKE, UNSTAKE_DELAY_SEC],
+      deterministicDeployment: false,
+      log: true
+    })
 
     // already deployed. do nothing.
-    return
+
   } catch (e) {
   }
 
@@ -33,13 +33,12 @@ const deployEP: DeployFunction = async function (hre: HardhatRuntimeEnvironment)
 
   await hre.deployments.deploy(
     'EntryPoint', {
-      // from: ethers.constants.AddressZero,
-      from: deployer,
-      // args: [PAYMASTER_STAKE, UNSTAKE_DELAY_SEC],
-      gasLimit: 4e6,
-      deterministicDeployment: true,
-      log: true
-    })
+    // from: ethers.constants.AddressZero,
+    from: deployer,
+    // args: [PAYMASTER_STAKE, UNSTAKE_DELAY_SEC],
+    gasLimit: 4e6,
+
+  })
 }
 
 export default deployEP

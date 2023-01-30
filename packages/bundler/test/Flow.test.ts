@@ -131,7 +131,7 @@ describe('Flow', function () {
 
     let addr = "0xB1d3BD3E33ec9A3A15C364C441D023a73f1729F6"
     let amount = parseEther('.01') //amount
-    let accountOwner = new Wallet('0x'.padEnd(66, '7'))
+    let accountOwner = new Wallet("0xf214f2b2cd398c806f84e317254e0f0b801d0643303237d97a22a48e01628897")
     const dep = new DeterministicDeployer(this.provider)
     const accountDeployer = await dep.getDeterministicDeployAddress(SimpleAccountDeployer__factory.bytecode)
 

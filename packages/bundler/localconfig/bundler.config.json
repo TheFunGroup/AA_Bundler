@@ -1,9 +1,9 @@
 {
   "gasFactor": "1",
-  "port": "3000",
-  "network": "https://rpc.ankr.com/eth_goerli",
-  "entryPoint": "0x2DF1592238420ecFe7f2431360e224707e77fA0E",
-  "beneficiary": "0xd21934eD8eAf27a67f0A70042Af50A1D6d195E81",
+  "port": "8545",
+  "network": "http://localhost:8545",
+  "entryPoint": "0xCf64E11cd6A6499FD6d729986056F5cA7348349D",
+  "beneficiary": "0xB1d3BD3E33ec9A3A15C364C441D023a73f1729F6",
   "minBalance": "1",
   "mnemonic": "./localconfig/mnemonic.txt",
   "helper": "0x780EcF3a794E9eb2b8C9baA6d8C4Ff36EFba770C"
