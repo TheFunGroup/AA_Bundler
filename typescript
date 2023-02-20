@@ -1,728 +1,0 @@
-Script started on Mon Feb 20 14:49:59 2023
-Your user’s .npmrc file (${HOME}/.npmrc)
-has a `globalconfig` and/or a `prefix` setting, which are incompatible with nvm.
-Run `nvm use --delete-prefix v16.14.2 --silent` to unset it.
-[1m[7m%[27m[1m[0m                                                                                                                                                                          ]2;aaronchew@Aarons-MacBook-Pro-2:~/CodeProjects/AA_Bundler-4]1;../AA_Bundler-4[0m[27m[24m[J[01;32m➜  [36mAA_Bundler-4[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004h[1m[31m./setup.sh[0m[39m[?1l>[?2004l
-]2;./setup.sh]1;./setup.shzsh: no such file or directory: ./setup.sh
-[1m[7m%[27m[1m[0m                                                                                                                                                                          ]2;aaronchew@Aarons-MacBook-Pro-2:~/CodeProjects/AA_Bundler-4]1;../AA_Bundler-4[0m[27m[24m[J[01;31m➜  [36mAA_Bundler-4[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004h[1m[31mc[0m[39m[1m[31mc[0m[39m[90md ..[39m[0m[32mc[32md[39m[39m [39m[4ml[24m[39m [90mocalfork[39m[8D[4ml[39m[4mo[24m[4mo[39m[4mc[24m[4mc[39m[4ma[24m[4ma[39m[4ml[24m[4ml[39m[4mf[24m[4mf[39m[4mo[24m[4mo[39m[4mr[24m[4mr[39m[4mk[24m[?1l>[?2004l
-]2;cd localfork]1;cd[1m[7m%[27m[1m[0m                                                                                                                                                                          ]2;aaronchew@Aarons-MacBook-Pro-2:~/CodeProjects/AA_Bundler-4/localfork]1;..r-4/localfork[0m[27m[24m[J[01;32m➜  [36mlocalfork[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004h[32ml[39m[32ml[39m[90ms[39m[32ml[32ms[39m[?1l>[?2004l
-]2;ls -G]1;lsForkSetup.js      TestConfig.json   forkConfig.json   [1m[36mnode_modules[39;49m[0m      [31msetup.sh[39;49m[0m
-ForkUtils.js      [1m[36mabis[39;49m[0m              hardhat.config.js package.json      yarn.lock
-[1m[7m%[27m[1m[0m                                                                                                                                                                          ]2;aaronchew@Aarons-MacBook-Pro-2:~/CodeProjects/AA_Bundler-4/localfork]1;..r-4/localfork[0m[27m[24m[J[01;32m➜  [36mlocalfork[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004h[32mls[39m[32mc[32md[39m localfork[12D[32m.[32m/[32ms[32me[32mt[32mu[32mp[32m.[32ms[32mh[39m  [?1l>[?2004l
-]2;./setup.sh]1;./setup.sh0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 == 10 => 0xB1d3BD3E33ec9A3A15C364C441D023a73f1729F6
-const entryPointAddress = "0xb04CB6c52E73CF3e2753776030CE85a36549c9C2"
-const verificationAddr = "0xc0c5618f0F3Fa66b496F2940f373DC366d765BAe"
-const factoryAddress = "0xa195ACcEB1945163160CD5703Ed43E4f78176a54"
-const tokenSwapAddress = "0x6212cb549De37c25071cF506aB7E115D140D9e42"
-const tokenPriceOracleAddress = "0x6F9679BdF5F180a139d01c598839a5df4860431b"
-const eoaAaveWithdrawAddress = "0xf4AE7E15B1012edceD8103510eeB560a9343AFd3"
-const paymasterAddress = "0x0bF7dE8d71820840063D4B8653Fd3F0618986faF"
-yarn run bundler --network "http://127.0.0.1:8545" --entryPoint "0xb04CB6c52E73CF3e2753776030CE85a36549c9C2"
-[2K[1G[1myarn run v1.22.19[22m
-[2K[1G[2m$ yarn --cwd packages/bundler bundler --network http://127.0.0.1:8545 --entryPoint 0xb04CB6c52E73CF3e2753776030CE85a36549c9C2[22m
-[2K[1G[2m$ ts-node ./src/exec.ts --config ./localconfig/bundler.config.json --network http://127.0.0.1:8545 --entryPoint 0xb04CB6c52E73CF3e2753776030CE85a36549c9C2[22m
-command-line arguments:  {
-  gasFactor: [32m'1'[39m,
-  port: [32m'3000'[39m,
-  config: [32m'./localconfig/bundler.config.json'[39m,
-  network: [32m'http://127.0.0.1:8545'[39m,
-  entryPoint: [32m'0xb04CB6c52E73CF3e2753776030CE85a36549c9C2'[39m
-}
-Merged configuration: {"port":"3000","helper":"0x780EcF3a794E9eb2b8C9baA6d8C4Ff36EFba770C","entryPoint":"0xb04CB6c52E73CF3e2753776030CE85a36549c9C2","gasFactor":"1","network":"http://127.0.0.1:8545","beneficiary":"0xB1d3BD3E33ec9A3A15C364C441D023a73f1729F6","minBalance":"1","mnemonic":"./localconfig/mnemonic.txt"}
-listen
-signer 0xB1d3BD3E33ec9A3A15C364C441D023a73f1729F6 balance 80.0
-connected to network { name: [32m'unknown'[39m, chainId: [33m31337[39m }
-running on http://localhost:3000/rpc
-ç ^C
-[1m[7m%[27m[1m[0m                                                                                                                                                                          ]2;aaronchew@Aarons-MacBook-Pro-2:~/CodeProjects/AA_Bundler-4/localfork]1;..r-4/localfork[0m[27m[24m[J[01;31m➜  [36mlocalfork[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004h[32m./setup.sh[39m[32mh[32m\[39m[32mh[39m[39m [?1l>[?2004l
-]2;./setup.sh]1;./setup.sh./setup.sh: line 1: terminal: command not found
-0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 == 10 => 0xB1d3BD3E33ec9A3A15C364C441D023a73f1729F6
-const entryPointAddress = "0x5E5713a0d915701F464DEbb66015adD62B2e6AE9"
-const verificationAddr = "0x97fd63D049089cd70D9D139ccf9338c81372DE68"
-^C
-[1m[7m%[27m[1m[0m                                                                                                                                                                          ]2;aaronchew@Aarons-MacBook-Pro-2:~/CodeProjects/AA_Bundler-4/localfork]1;..r-4/localfork[0m[27m[24m[J[01;31m➜  [36mlocalfork[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004h[32m./setup.sh[39m[?1l>[?2004l
-]2;./setup.sh]1;./setup.sh60:65: syntax error: Expected end of line but found identifier. (-2741)
-0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 == 10 => 0xB1d3BD3E33ec9A3A15C364C441D023a73f1729F6
-const entryPointAddress = "0x43cA9bAe8dF108684E5EAaA720C25e1b32B0A075"
-^C
-[1m[7m%[27m[1m[0m                                                                                                                                                                          ]2;aaronchew@Aarons-MacBook-Pro-2:~/CodeProjects/AA_Bundler-4/localfork]1;..r-4/localfork[0m[27m[24m[J[01;31m➜  [36mlocalfork[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004h[32m./setup.sh[39m[?1l>[?2004l
-]2;./setup.sh]1;./setup.shtab 1 of window id 228750
-0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 == 10 => 0xB1d3BD3E33ec9A3A15C364C441D023a73f1729F6
-const entryPointAddress = "0x59C4e2c6a6dC27c259D6d067a039c831e1ff4947"
-const verificationAddr = "0x9d136eEa063eDE5418A6BC7bEafF009bBb6CFa70"
-const factoryAddress = "0x687bB6c57915aa2529EfC7D2a26668855e022fAE"
-const tokenSwapAddress = "0x49149a233de6E4cD6835971506F47EE5862289c1"
-const tokenPriceOracleAddress = "0xAe2563b4315469bF6bdD41A6ea26157dE57Ed94e"
-const eoaAaveWithdrawAddress = "0x30426D33a78afdb8788597D5BFaBdADc3Be95698"
-const paymasterAddress = "0x85495222Fd7069B987Ca38C2142732EbBFb7175D"
-yarn run bundler --network "http://127.0.0.1:8545" --entryPoint "0x59C4e2c6a6dC27c259D6d067a039c831e1ff4947"
-[1m[7m%[27m[1m[0m                                                                                                                                                                          ]2;aaronchew@Aarons-MacBook-Pro-2:~/CodeProjects/AA_Bundler-4/localfork]1;..r-4/localfork[0m[27m[24m[J[01;32m➜  [36mlocalfork[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004h[32m./setup.sh[39m[10D[39m[4m.[39m[4m/[39m[4ms[39m[4me[39m[4mt[39m[4mu[39m[4mp[39m[4m.[39m[4ms[24m[39m [90mh[39m[4m.[24m[24m [39m [90msh[39m[4mp[24m[24m [39m [39m [90m.sh[39m[4mu[24m[24m [39m [39m [39m [90mp.sh[39m[4mt[24m[24m [39m [39m [39m [39m [90mup.sh[39m[4me[24m[24m [39m [39m [39m [39m [39m [90mtup.sh[39m[4ms[24m[24m [39m [39m [39m [39m [39m [39m [90metup.sh[39m[4m[32m.[4m[32m/[24m[39m[24m [39m [39m [39m [39m [39m [39m [39m [8D[90msetup.sh[39m[8D[24m[32m.[39m[24m[39m [39m [39m [39m [39m [39m [39m [39m [39m [9D[32m.[39m[90m/setup.sh[39m[9D[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [10D[32mls[39m[39m [39m [32mls[39m[32mc[32md[39m localfork[12D[32m.[32m/[32ms[32me[32mt[32mu[32mp[32m.[32ms[32mh[39m  [?1l>[?2004l
-]2;./setup.sh]1;./setup.shtab 1 of window id 228752
-/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/@ethersproject/logger/lib/index.js:238
-        var error = new Error(message);
-                    ^
-
-Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
-    at Logger.makeError (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/logger/lib/index.js:238:21)
-    at Logger.throwError (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/logger/lib/index.js:247:20)
-    at JsonRpcProvider.<anonymous> (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:609:54)
-    at step (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:48:23)
-    at Object.throw (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:29:53)
-    at rejected (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:21:65)
-[90m    at processTicksAndRejections (node:internal/process/task_queues:96:5)[39m {
-  reason: [32m'could not detect network'[39m,
-  code: [32m'NETWORK_ERROR'[39m,
-  event: [32m'noNetwork'[39m
-}
-/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/@ethersproject/logger/lib/index.js:238
-        var error = new Error(message);
-                    ^
-
-Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
-    at Logger.makeError (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/logger/lib/index.js:238:21)
-    at Logger.throwError (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/logger/lib/index.js:247:20)
-    at JsonRpcProvider.<anonymous> (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:609:54)
-    at step (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:48:23)
-    at Object.throw (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:29:53)
-    at rejected (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:21:65)
-[90m    at processTicksAndRejections (node:internal/process/task_queues:96:5)[39m {
-  reason: [32m'could not detect network'[39m,
-  code: [32m'NETWORK_ERROR'[39m,
-  event: [32m'noNetwork'[39m
-}
-yarn run bundler --network "http://127.0.0.1:8545" --entryPoint "0x59C4e2c6a6dC27c259D6d067a039c831e1ff4947"
-[2K[1G[1myarn run v1.22.19[22m
-[2K[1G[2m$ yarn --cwd packages/bundler bundler --network http://127.0.0.1:8545 --entryPoint 0x59C4e2c6a6dC27c259D6d067a039c831e1ff4947[22m
-[2K[1G[2m$ ts-node ./src/exec.ts --config ./localconfig/bundler.config.json --network http://127.0.0.1:8545 --entryPoint 0x59C4e2c6a6dC27c259D6d067a039c831e1ff4947[22m
-command-line arguments:  {
-  gasFactor: [32m'1'[39m,
-  port: [32m'3000'[39m,
-  config: [32m'./localconfig/bundler.config.json'[39m,
-  network: [32m'http://127.0.0.1:8545'[39m,
-  entryPoint: [32m'0x59C4e2c6a6dC27c259D6d067a039c831e1ff4947'[39m
-}
-Merged configuration: {"port":"3000","helper":"0x780EcF3a794E9eb2b8C9baA6d8C4Ff36EFba770C","entryPoint":"0x59C4e2c6a6dC27c259D6d067a039c831e1ff4947","gasFactor":"1","network":"http://127.0.0.1:8545","beneficiary":"0xB1d3BD3E33ec9A3A15C364C441D023a73f1729F6","minBalance":"1","mnemonic":"./localconfig/mnemonic.txt"}
-listen
-/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/@ethersproject/logger/src.ts/index.ts:269
-        const error: any = new Error(message);
-                           ^
-Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
-    at Logger.makeError (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/logger/src.ts/index.ts:269:28)
-    at Logger.throwError (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/logger/src.ts/index.ts:281:20)
-    at JsonRpcProvider.<anonymous> (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/src.ts/json-rpc-provider.ts:483:23)
-    at step (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:48:23)
-    at Object.throw (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:29:53)
-    at rejected (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:21:65)
-[90m    at processTicksAndRejections (node:internal/process/task_queues:96:5)[39m {
-  reason: [32m'could not detect network'[39m,
-  code: [32m'NETWORK_ERROR'[39m,
-  event: [32m'noNetwork'[39m
-}
-[2K[1G[31merror[39m Command failed with exit code 1.
-[2K[1G[34minfo[39m Visit [1mhttps://yarnpkg.com/en/docs/cli/run[22m for documentation about this command.
-[2K[1G[31merror[39m Command failed with exit code 1.
-[2K[1G[34minfo[39m Visit [1mhttps://yarnpkg.com/en/docs/cli/run[22m for documentation about this command.
-[1m[7m%[27m[1m[0m                                                                                                                                                                          ]2;aaronchew@Aarons-MacBook-Pro-2:~/CodeProjects/AA_Bundler-4/localfork]1;..r-4/localfork[0m[27m[24m[J[01;31m➜  [36mlocalfork[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hoosascript -e 'tell app "Terminal"
-    d[Ko script "npx hardhat node --fork \"https://eth-mainnet.g.alchemy.com/v2/lcA7Kyqv42J1Qh-wLm__DdqSCJBtZyd1\""
-e[Kend tell[A[A[18C[32mo[32ms[32ma[32ms[32mc[32mr[32mi[32mp[32mt[39m[4C[33m'[33mt[33me[33ml[33ml[33m [33ma[33mp[33mp[33m [33m"[33mT[33me[33mr[33mm[33mi[33mn[33ma[33ml[33m"[1B[39m[33m [33m [33m [33m [33md[33mo[33m [33ms[33mc[33mr[33mi[33mp[33mt[33m [33m"[33mn[33mp[33mx[33m [33mh[33ma[33mr[33md[33mh[33ma[33mt[33m [33mn[33mo[33md[33me[33m [33m-[33m-[33mf[33mo[33mr[33mk[33m [33m\[33m"[33mh[33mt[33mt[33mp[33ms[33m:[33m/[33m/[33me[33mt[33mh[33m-[33mm[33ma[33mi[33mn[33mn[33me[33mt[33m.[33mg[33m.[33ma[33ml[33mc[33mh[33me[33mm[33my[33m.[33mc[33mo[33mm[33m/[33mv[33m2[33m/[33ml[33mc[33mA[33m7[33mK[33my[33mq[33mv[33m4[33m2[33mJ[33m1[33mQ[33mh[33m-[33mw[33mL[33mm[33m_[33m_[33mD[33md[33mq[33mS[33mC[33mJ[33mB[33mt[33mZ[33my[33md[33m1[33m\[33m"[33m"[1B[39m[33me[33mn[33md[33m [33mt[33me[33ml[33ml[33m'[39m[A[A[17C[39m[7mo[39m[7ms[39m[7ma[39m[7ms[39m[7mc[39m[7mr[39m[7mi[39m[7mp[39m[7mt[7m [7m-[7me[7m [39m[7m'[39m[7mt[39m[7me[39m[7ml[39m[7ml[39m[7m [39m[7ma[39m[7mp[39m[7mp[39m[7m [39m[7m"[39m[7mT[39m[7me[39m[7mr[39m[7mm[39m[7mi[39m[7mn[39m[7ma[39m[7ml[39m[7m"[1B[27m[39m[7m [39m[7m [39m[7m [39m[7m [39m[7md[39m[7mo[39m[7m [39m[7ms[39m[7mc[39m[7mr[39m[7mi[39m[7mp[39m[7mt[39m[7m [39m[7m"[39m[7mn[39m[7mp[39m[7mx[39m[7m [39m[7mh[39m[7ma[39m[7mr[39m[7md[39m[7mh[39m[7ma[39m[7mt[39m[7m [39m[7mn[39m[7mo[39m[7md[39m[7me[39m[7m [39m[7m-[39m[7m-[39m[7mf[39m[7mo[39m[7mr[39m[7mk[39m[7m [39m[7m\[39m[7m"[39m[7mh[39m[7mt[39m[7mt[39m[7mp[39m[7ms[39m[7m:[39m[7m/[39m[7m/[39m[7me[39m[7mt[39m[7mh[39m[7m-[39m[7mm[39m[7ma[39m[7mi[39m[7mn[39m[7mn[39m[7me[39m[7mt[39m[7m.[39m[7mg[39m[7m.[39m[7ma[39m[7ml[39m[7mc[39m[7mh[39m[7me[39m[7mm[39m[7my[39m[7m.[39m[7mc[39m[7mo[39m[7mm[39m[7m/[39m[7mv[39m[7m2[39m[7m/[39m[7ml[39m[7mc[39m[7mA[39m[7m7[39m[7mK[39m[7my[39m[7mq[39m[7mv[39m[7m4[39m[7m2[39m[7mJ[39m[7m1[39m[7mQ[39m[7mh[39m[7m-[39m[7mw[39m[7mL[39m[7mm[39m[7m_[39m[7m_[39m[7mD[39m[7md[39m[7mq[39m[7mS[39m[7mC[39m[7mJ[39m[7mB[39m[7mt[39m[7mZ[39m[7my[39m[7md[39m[7m1[39m[7m\[39m[7m"[39m[7m"[1B[27m[39m[7me[39m[7mn[39m[7md[39m[7m [39m[7mt[39m[7me[39m[7ml[39m[7ml[39m[7m'[27m[A[A[17C[27mo[27ms[27ma[27ms[27mc[27mr[27mi[27mp[27mt[27m [27m-[27me[27m [27m'[27mt[27me[27ml[27ml[27m [27ma[27mp[27mp[27m [27m"[27mT[27me[27mr[27mm[27mi[27mn[27ma[27ml[27m"[1B[27m [27m [27m [27m [27md[27mo[27m [27ms[27mc[27mr[27mi[27mp[27mt[27m [27m"[27mn[27mp[27mx[27m [27mh[27ma[27mr[27md[27mh[27ma[27mt[27m [27mn[27mo[27md[27me[27m [27m-[27m-[27mf[27mo[27mr[27mk[27m [27m\[27m"[27mh[27mt[27mt[27mp[27ms[27m:[27m/[27m/[27me[27mt[27mh[27m-[27mm[27ma[27mi[27mn[27mn[27me[27mt[27m.[27mg[27m.[27ma[27ml[27mc[27mh[27me[27mm[27my[27m.[27mc[27mo[27mm[27m/[27mv[27m2[27m/[27ml[27mc[27mA[27m7[27mK[27my[27mq[27mv[27m4[27m2[27mJ[27m1[27mQ[27mh[27m-[27mw[27mL[27mm[27m_[27m_[27mD[27md[27mq[27mS[27mC[27mJ[27mB[27mt[27mZ[27my[27md[27m1[27m\[27m"[27m"[1B[27me[27mn[27md[27m [27mt[27me[27ml[27ml[27m'[A[A[17C[32mo[32ms[32ma[32ms[32mc[32mr[32mi[32mp[32mt[39m[4C[33m'[33mt[33me[33ml[33ml[33m [33ma[33mp[33mp[33m [33m"[33mT[33me[33mr[33mm[33mi[33mn[33ma[33ml[33m"[1B[39m[33m [33m [33m [33m [33md[33mo[33m [33ms[33mc[33mr[33mi[33mp[33mt[33m [33m"[33mn[33mp[33mx[33m [33mh[33ma[33mr[33md[33mh[33ma[33mt[33m [33mn[33mo[33md[33me[33m [33m-[33m-[33mf[33mo[33mr[33mk[33m [33m\[33m"[33mh[33mt[33mt[33mp[33ms[33m:[33m/[33m/[33me[33mt[33mh[33m-[33mm[33ma[33mi[33mn[33mn[33me[33mt[33m.[33mg[33m.[33ma[33ml[33mc[33mh[33me[33mm[33my[33m.[33mc[33mo[33mm[33m/[33mv[33m2[33m/[33ml[33mc[33mA[33m7[33mK[33my[33mq[33mv[33m4[33m2[33mJ[33m1[33mQ[33mh[33m-[33mw[33mL[33mm[33m_[33m_[33mD[33md[33mq[33mS[33mC[33mJ[33mB[33mt[33mZ[33my[33md[33m1[33m\[33m"[33m"[1B[39m[33me[33mn[33md[33m [33mt[33me[33ml[33ml[33m'[39m[?1l>[?2004l
-]2;osascript -e ]1;osascripttab 1 of window id 229019
-[1m[7m%[27m[1m[0m                                                                                                                                                                          ]2;aaronchew@Aarons-MacBook-Pro-2:~/CodeProjects/AA_Bundler-4/localfork]1;..r-4/localfork[0m[27m[24m[J[01;32m➜  [36mlocalfork[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004h[1m[31mo[0m[39m[1m[31mo[0m[39m[90msascript -e 'tell app "Terminal"[39m
-[90m    do script "npx hardhat node --fork \"https://eth-mainnet.g.alchemy.com/v2/lcA7Kyqv42J1Qh-wLm__DdqSCJBtZyd1\""[39m[K
-[90mend tell'[39m[K[A[A[18C[1m[31mo[1m[31mp[0m[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [1B[K[1B[K[A[A[28C[90men .[39m[1m[31mo[0m[39m[0m[39m [39m [39m [39m [39m [1m[31mo[0m[39m[90msascript -e 'tell app "Terminal"[1B[39m[90m    do script "npx hardhat node --fork \"https://eth-mainnet.g.alchemy.com/v2/lcA7Kyqv42J1Qh-wLm__DdqSCJBtZyd1\""[39m[K[1B[90mend tell'[39m[K[A[A[18C[0m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [1B[K[1B[K[A[A[26C[32ml[39m[32ml[39m[90msof -i tcp:8545[39m[15D[32ml[32ms[39m[1m[31ml[1m[31ms[1m[31mo[0m[39m[0m[32ml[0m[32ms[0m[32mo[32mf[39m[39m [39m-[39mi[39m [39mt[39mc[39mp[39m:[39m8[39m5[39m4[39m5[?1l>[?2004l[1B]2;lsof -i tcp:8545]1;lsof[1m[7m%[27m[1m[0m                                                                                                                                                                          ]2;aaronchew@Aarons-MacBook-Pro-2:~/CodeProjects/AA_Bundler-4/localfork]1;..r-4/localfork[0m[27m[24m[J[01;31m➜  [36mlocalfork[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004h[32ml[39m[32ml[39m[90msof -i tcp:8545[39m[15D[32ml[32ms[39m[1m[31ml[1m[31ms[1m[31mo[0m[39m[0m[32ml[0m[32ms[0m[32mo[32mf[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [12D[?1l>[?2004l
-]2;lsof]1;lsofCOMMAND     PID      USER   FD      TYPE             DEVICE   SIZE/OFF                NODE NAME
-loginwind   372 aaronchew  cwd       DIR               1,15        640                   2 /
-loginwind   372 aaronchew  txt       REG               1,15    2754560 1152921500312205593 /System/Library/CoreServices/loginwindow.app/Contents/MacOS/loginwindow
-loginwind   372 aaronchew  txt       REG               1,15      46944            18365205 /Library/Preferences/Logging/.plist-cache.UFiUklID
-loginwind   372 aaronchew  txt       REG               1,15    2177216 1152921500312782999 /usr/lib/dyld
-loginwind   372 aaronchew  txt       REG               1,15   30399984 1152921500312794842 /usr/share/icu/icudt70l.dat
-loginwind   372 aaronchew  txt       REG               1,15     136152 1152921500312200272 /System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/SystemAppearance.car
-loginwind   372 aaronchew  txt       REG               1,15     209680 1152921500312354532 /System/Library/LoginPlugins/FSDisconnect.loginPlugin/Contents/MacOS/FSDisconnect
-loginwind   372 aaronchew  txt       REG               1,15     335328 1152921500312354482 /System/Library/LoginPlugins/DisplayServices.loginPlugin/Contents/MacOS/DisplayServices
-loginwind   372 aaronchew  txt       REG               1,15     234832             5747833 /private/var/db/timezone/tz/2022g.1.0/icutz/icutz44l.dat
-loginwind   372 aaronchew  txt       REG               1,15    7322840 1152921500312200234 /System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/Aqua.car
-loginwind   372 aaronchew  txt       REG               1,15    2736376 1152921500312200262 /System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/FauxVibrantLight.car
-loginwind   372 aaronchew  txt       REG               1,15    5635160 1152921500312200286 /System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/VibrantLight.car
-loginwind   372 aaronchew  txt       REG               1,15     297536 1152921500312783019 /usr/lib/libobjc-trampolines.dylib
-loginwind   372 aaronchew  txt       REG               1,15      32768            18365229 /private/var/db/mds/messages/se_SecurityMessages
-loginwind   372 aaronchew  txt       REG               1,15      71320 1152921500312200258 /System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/FauxVibrantDark.car
-loginwind   372 aaronchew  txt       REG               1,15     718688 1152921500312354267 /System/Library/LoginPlugins/BezelServices.loginPlugin/Contents/MacOS/BezelServices
-loginwind   372 aaronchew  txt       REG               1,15    7214792 1152921500312200246 /System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/DarkAqua.car
-loginwind   372 aaronchew  txt       REG               1,15    6194600 1152921500312200276 /System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/VibrantDark.car
-loginwind   372 aaronchew  txt       REG               1,15     202800 1152921500312266608 /System/Library/Frameworks/FileProvider.framework/OverrideBundles/CloudDocsFileProvider.bundle/Contents/MacOS/CloudDocsFileProvider
-loginwind   372 aaronchew  txt       REG               1,15     331944 1152921500312354722 /System/Library/MessageTracer/SubmitDiagInfo.default.domains.searchtree
-loginwind   372 aaronchew  txt       REG               1,15     265264 1152921500312201421 /System/Library/CoreServices/TextInputMenuCore.bundle/Contents/MacOS/TextInputMenuCore
-loginwind   372 aaronchew  txt       REG               1,15     204912 1152921500312266619 /System/Library/Frameworks/FileProvider.framework/OverrideBundles/FileProviderOverride.bundle/Contents/MacOS/FileProviderOverride
-loginwind   372 aaronchew  txt       REG               1,15     526960 1152921500312266633 /System/Library/Frameworks/FileProvider.framework/OverrideBundles/FinderSyncCollaborationFileProviderOverride.bundle/Contents/MacOS/FinderSyncCollaborationFileProviderOverride
-loginwind   372 aaronchew  txt       REG               1,15      32768              971400 /private/var/folders/5g/65xm_jx94fd_h6m8dyc493hh0000gn/C/com.apple.loginwindow/com.apple.metal/16777235_562/functions.data
-loginwind   372 aaronchew  txt       REG               1,15     208016 1152921500312783044 /usr/lib/pam/pam_opendirectory.so.2
-loginwind   372 aaronchew  txt       REG               1,15     135104               27162 /System/Library/Caches/com.apple.IntlDataCache.le.kbdx
-loginwind   372 aaronchew  txt       REG               1,15     371440 1152921500312222522 /System/Library/Extensions/IOHIDFamily.kext/Contents/PlugIns/IOHIDLib.plugin/Contents/MacOS/IOHIDLib
-loginwind   372 aaronchew  txt       REG               1,15    1296040 1152921500312349824 /System/Library/Keyboard Layouts/AppleKeyboardLayouts.bundle/Contents/Resources/AppleKeyboardLayouts-L.dat
-loginwind   372 aaronchew  txt       REG               1,15    1284064 1152921500312232850 /System/Library/Frameworks/AppKit.framework/Versions/C/Resources/Assets.car
-loginwind   372 aaronchew  txt       REG               1,15    3040992 1152921500312122334 /System/Library/Components/CoreAudio.component/Contents/MacOS/CoreAudio
-loginwind   372 aaronchew  txt       REG               1,15     116763            27505396 /private/var/db/analyticsd/events.allowlist
-loginwind   372 aaronchew  txt       REG               1,15     168560 1152921500312349760 /System/Library/KerberosPlugins/KerberosFrameworkPlugins/AppSSOLocatePlugin_macOS.bundle/Contents/MacOS/AppSSOLocatePlugin_macOS
-loginwind   372 aaronchew  txt       REG               1,15     168144 1152921500312349749 /System/Library/KerberosPlugins/KerberosFrameworkPlugins/AppSSOConfigPlugin_macOS.bundle/Contents/MacOS/AppSSOConfigPlugin_macOS
-loginwind   372 aaronchew  txt       REG               1,15     169424 1152921500312349792 /System/Library/KerberosPlugins/KerberosFrameworkPlugins/heimdalodpac.bundle/Contents/MacOS/heimdalodpac
-loginwind   372 aaronchew  txt       REG               1,15    8167400 1152921500312229211 /System/Library/Fonts/SFNS.ttf
-loginwind   372 aaronchew  txt       REG               1,15    3384528 1152921500312200240 /System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/Assets.car
-loginwind   372 aaronchew  txt       REG               1,15     862024 1152921500312493959 /System/Library/PrivateFrameworks/CoreWLANKit.framework/Versions/A/Resources/Assets.car
-loginwind   372 aaronchew  txt       REG               1,15    1547960 1152921500312211164 /System/Library/Extensions/AGXMetalG13X.bundle/Contents/Resources/ds.g13c
-loginwind   372 aaronchew  txt       REG               1,15    2369376 1152921500312229151 /System/Library/Fonts/Helvetica.ttc
-loginwind   372 aaronchew  txt       REG               1,15     169968 1152921500312349770 /System/Library/KerberosPlugins/KerberosFrameworkPlugins/Reachability.bundle/Contents/MacOS/Reachability
-loginwind   372 aaronchew  txt       REG               1,15     284152 1152921500312545542 /System/Library/PrivateFrameworks/LoginUIKit.framework/Versions/A/Resources/Assets.car
-loginwind   372 aaronchew  txt       REG               1,15     169840 1152921500312349781 /System/Library/KerberosPlugins/KerberosFrameworkPlugins/SCKerberosConfig.bundle/Contents/MacOS/SCKerberosConfig
-loginwind   372 aaronchew  txt       REG               1,15      49152              971410 /private/var/folders/5g/65xm_jx94fd_h6m8dyc493hh0000gn/C/com.apple.loginwindow/com.apple.metal/31001/libraries.data
-loginwind   372 aaronchew  txt       REG               1,15      93912 1152921500312462100 /System/Library/PrivateFrameworks/BatteryUIKit.framework/Versions/A/Resources/Assets.car
-loginwind   372 aaronchew  txt       REG               1,15     227232 1152921500312783036 /usr/lib/pam/pam_localauthentication.so.2
-loginwind   372 aaronchew  txt       REG               1,15    6389760            27668947 /private/var/folders/5g/65xm_jx94fd_h6m8dyc493hh0000gn/0/com.apple.LaunchServices.dv/com.apple.LaunchServices-3027-v2.csstore
-loginwind   372 aaronchew  txt       REG               1,15   75890008 1152921500312151331 /System/Library/CoreServices/CoreGlyphs.bundle/Contents/Resources/Assets.car
-loginwind   372 aaronchew    0r      CHR                3,2        0t0                 334 /dev/null
-loginwind   372 aaronchew    1u      CHR                3,2        0t0                 334 /dev/null
-loginwind   372 aaronchew    2u      CHR                3,2    0t53965                 334 /dev/null
-loginwind   372 aaronchew    3r      REG               1,15         77               22994 /private/etc/security/audit_user
-loginwind   372 aaronchew    4r      REG               1,15        652               22992 /private/etc/security/audit_class
-loginwind   372 aaronchew    5r      REG               1,15        358               22995 /private/etc/security/audit_control
-loginwind   372 aaronchew    6r      REG               1,15     331944 1152921500312354722 /System/Library/MessageTracer/SubmitDiagInfo.default.domains.searchtree
-loginwind   372 aaronchew    7u     IPv4 0x6c507a855648d433        0t0                 UDP *:*
-loginwind   372 aaronchew    8r      REG               1,15    1727450 1152921500312326710 /System/Library/Frameworks/SceneKit.framework/Versions/A/Resources/default.metallib
-loginwind   372 aaronchew    9u      REG               1,15      32768              971400 /private/var/folders/5g/65xm_jx94fd_h6m8dyc493hh0000gn/C/com.apple.loginwindow/com.apple.metal/16777235_562/functions.data
-loginwind   372 aaronchew   10u      REG               1,15        828            18475405 /private/var/folders/5g/65xm_jx94fd_h6m8dyc493hh0000gn/C/com.apple.loginwindow/com.apple.metal/16777235_562/functions.list
-loginwind   372 aaronchew   11r      REG               1,15    5330028 1152921500312455166 /System/Library/PrivateFrameworks/AvatarKit.framework/Versions/A/Resources/default.metallib
-loginwind   372 aaronchew   12r      REG               1,15     152910 1152921500312258245 /System/Library/Frameworks/CoreImage.framework/Versions/A/Resources/ci_stdlib.metallib
-loginwind   372 aaronchew   13r      REG               1,15     605748 1152921500312258241 /System/Library/Frameworks/CoreImage.framework/Versions/A/Resources/ci_filters.metallib
-loginwind   372 aaronchew   14r      REG               1,15    1179816 1152921500312258249 /System/Library/Frameworks/CoreImage.framework/Versions/A/Resources/ci_stdlib_stitchable.metallib
-loginwind   372 aaronchew   15r      REG               1,15    3787562 1152921500312258243 /System/Library/Frameworks/CoreImage.framework/Versions/A/Resources/ci_filters_stitchable.metallib
-loginwind   372 aaronchew   17u      REG               1,15      49152              971410 /private/var/folders/5g/65xm_jx94fd_h6m8dyc493hh0000gn/C/com.apple.loginwindow/com.apple.metal/31001/libraries.data
-loginwind   372 aaronchew   18u      REG               1,15        268            18475406 /private/var/folders/5g/65xm_jx94fd_h6m8dyc493hh0000gn/C/com.apple.loginwindow/com.apple.metal/31001/libraries.list
-WD-TabNin   419 aaronchew  cwd       DIR               1,15        640                   2 /
-WD-TabNin   419 aaronchew  txt       REG               1,15    6917840            27734584 /Users/aaronchew/Library/Application Support/Code/User/globalStorage/tabnine.tabnine-vscode/binaries/4.4.249/aarch64-apple-darwin/WD-TabNine
-WD-TabNin   419 aaronchew  txt       REG               1,15    2177216 1152921500312782999 /usr/lib/dyld
-WD-TabNin   419 aaronchew  txt       REG               1,15      46944            18365205 /Library/Preferences/Logging/.plist-cache.UFiUklID
-WD-TabNin   419 aaronchew  txt       REG               1,15     116763            27505396 /private/var/db/analyticsd/events.allowlist
-WD-TabNin   419 aaronchew  txt       REG               1,15   30399984 1152921500312794842 /usr/share/icu/icudt70l.dat
-WD-TabNin   419 aaronchew    0r      CHR                3,2        0t0                 334 /dev/null
-WD-TabNin   419 aaronchew    1w      CHR                3,2        0t0                 334 /dev/null
-WD-TabNin   419 aaronchew    2u     unix 0x6c507a7bbbc89bab        0t0                     ->0x6c507a7bbbc89ae3
-WD-TabNin   419 aaronchew    3u   KQUEUE                                                   count=0, state=0xa
-WD-TabNin   419 aaronchew    4u   KQUEUE                                                   count=0, state=0xa
-WD-TabNin   419 aaronchew    5u   KQUEUE                                                   count=0, state=0xa
-WD-TabNin   419 aaronchew    6u     unix 0x6c507a7bbbc8ea73        0t0                     ->0x6c507a7bbbc8f6f3
-WD-TabNin   419 aaronchew    7u     unix 0x6c507a7bbbc8f6f3        0t0                     ->0x6c507a7bbbc8ea73
-WD-TabNin   419 aaronchew    8u     unix 0x6c507a7bbbc8ea73        0t0                     ->0x6c507a7bbbc8f6f3
-WD-TabNin   419 aaronchew    9w      REG               1,15          0            27542709 /Users/aaronchew/Library/Preferences/TabNine/monitoring/watchdog.lock
-WD-TabNin   419 aaronchew   10u   KQUEUE                                                   count=0, state=0xa
-WD-TabNin   419 aaronchew   11      PIPE 0xe075b63539abcdd2      16384                     ->0x96b2ee1d574a05b0
-WD-TabNin   419 aaronchew   12      PIPE 0x96b2ee1d574a05b0      16384                     ->0xe075b63539abcdd2
-WD-TabNin   419 aaronchew   13   NPOLICY                                                   
-WD-TabNin   419 aaronchew   14u     unix 0x6c507a7bbbc88f2b        0t0                     ->0x6c507a7bbbc89183
-WD-TabNin   419 aaronchew   15u     IPv4 0x6c507a7bbaac53a3        0t0                 TCP 192.168.4.27:58394->59.65.170.34.bc.googleusercontent.com:https (ESTABLISHED)
-zsh         440 aaronchew  cwd       DIR               1,15        480            27548737 /Users/aaronchew/CodeProjects/AA_Bundler-3/packages/bundler
-zsh         440 aaronchew  txt       REG               1,15    1377872 1152921500312781088 /bin/zsh
-zsh         440 aaronchew  txt       REG               1,15     371312 1152921500312783174 /usr/lib/zsh/5.8.1/zsh/complete.so
-zsh         440 aaronchew  txt       REG               1,15     204128 1152921500312783208 /usr/lib/zsh/5.8.1/zsh/parameter.so
-zsh         440 aaronchew  txt       REG               1,15     168016 1152921500312783222 /usr/lib/zsh/5.8.1/zsh/terminfo.so
-zsh         440 aaronchew  txt       REG               1,15     240976 1152921500312783176 /usr/lib/zsh/5.8.1/zsh/complist.so
-zsh         440 aaronchew  txt       REG               1,15     167072 1152921500312783190 /usr/lib/zsh/5.8.1/zsh/langinfo.so
-zsh         440 aaronchew  txt       REG               1,15     203776 1152921500312783236 /usr/lib/zsh/5.8.1/zsh/zutil.so
-zsh         440 aaronchew  txt       REG               1,15     168464 1152921500312783182 /usr/lib/zsh/5.8.1/zsh/datetime.so
-zsh         440 aaronchew  txt       REG               1,15     168272 1152921500312783216 /usr/lib/zsh/5.8.1/zsh/stat.so
-zsh         440 aaronchew  txt       REG               1,15     167840 1152921500312783210 /usr/lib/zsh/5.8.1/zsh/regex.so
-zsh         440 aaronchew  txt       REG               1,15     609328 1152921500312783226 /usr/lib/zsh/5.8.1/zsh/zle.so
-zsh         440 aaronchew  txt       REG               1,15     167440 1152921500312783228 /usr/lib/zsh/5.8.1/zsh/zleparameter.so
-zsh         440 aaronchew  txt       REG               1,15    2177216 1152921500312782999 /usr/lib/dyld
-zsh         440 aaronchew  txt       REG               1,15     169488 1152921500312783218 /usr/lib/zsh/5.8.1/zsh/system.so
-zsh         440 aaronchew    0u      CHR              16,11     0t1609                 937 /dev/ttys011
-zsh         440 aaronchew    1u      CHR              16,11     0t1609                 937 /dev/ttys011
-zsh         440 aaronchew    2u      CHR              16,11     0t1609                 937 /dev/ttys011
-zsh         440 aaronchew   10u      CHR              16,11     0t6643                 937 /dev/ttys011
-zsh         440 aaronchew   12r      REG               46,4     665256              531299 /private/var/folders/5g/65xm_jx94fd_h6m8dyc493hh0000gn/T/AppTranslocation/57A016E9-4F8B-4EE3-934A-8751E3A92281/d/Visual Studio Code.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/v8_context_snapshot.arm64.bin
-zsh         440 aaronchew   25w      REG               1,15       6058            18386494 /Users/aaronchew/Library/Application Support/Code/logs/20230125T143542/ptyhost.log
-zsh         440 aaronchew   26r      REG               46,4   17277624              529999 /private/var/folders/5g/65xm_jx94fd_h6m8dyc493hh0000gn/T/AppTranslocation/57A016E9-4F8B-4EE3-934A-8751E3A92281/d/Visual Studio Code.app/Contents/Resources/app/node_modules.asar
-zsh         440 aaronchew   27u      CHR               15,9    0t51202                 603 /dev/ptmx
-zsh         440 aaronchew   28u      CHR              15,30   0t194626                 603 /dev/ptmx
-zsh         440 aaronchew   29u      CHR               15,1   0t166438                 603 /dev/ptmx
-zsh         440 aaronchew   30u      CHR              15,22    0t88270                 603 /dev/ptmx
-zsh         440 aaronchew   31u      CHR               15,8    0t55283                 603 /dev/ptmx
-zsh         440 aaronchew   32u      CHR               15,7    0t69027                 603 /dev/ptmx
-zsh         440 aaronchew   33u      CHR              15,10  0t1972332                 603 /dev/ptmx
-zsh         440 aaronchew   34u      CHR              15,14   0t350965                 603 /dev/ptmx
-distnoted   519 aaronchew  cwd       DIR               1,15        640                   2 /
-distnoted   519 aaronchew  txt       REG               1,15     357392 1152921500312789706 /usr/sbin/distnoted
-distnoted   519 aaronchew  txt       REG               1,15      46944            18365205 /Library/Preferences/Logging/.plist-cache.UFiUklID
-distnoted   519 aaronchew  txt       REG               1,15    2177216 1152921500312782999 /usr/lib/dyld
-distnoted   519 aaronchew    0r      CHR                3,2        0t0                 334 /dev/null
-distnoted   519 aaronchew    1u      CHR                3,2        0t0                 334 /dev/null
-distnoted   519 aaronchew    2u      CHR                3,2      0t165                 334 /dev/null
-distnoted   519 aaronchew    3u     unix 0x6c507a7bbc9130b3        0t0                     ->0x6c507a7bbc9109a3
-UserEvent   530 aaronchew  cwd       DIR               1,15        640                   2 /
-UserEvent   530 aaronchew  txt       REG               1,15     177776 1152921500312783669 /usr/libexec/UserEventAgent
-UserEvent   530 aaronchew  txt       REG               1,15      46944            18365205 /Library/Preferences/Logging/.plist-cache.UFiUklID
-UserEvent   530 aaronchew  txt       REG               1,15    2177216 1152921500312782999 /usr/lib/dyld
-UserEvent   530 aaronchew  txt       REG               1,15     137904 1152921500312721764 /System/Library/UserEventPlugins/PrinterMonitor.plugin/Contents/MacOS/PrinterMonitor
-UserEvent   530 aaronchew  txt       REG               1,15     135648 1152921500312721903 /System/Library/UserEventPlugins/SystemPolicyEvents.plugin/Contents/MacOS/SystemPolicyEvents
-UserEvent   530 aaronchew  txt       REG               1,15     139648 1152921500312721459 /System/Library/UserEventPlugins/AppleHIDMouseAgent.plugin/Contents/MacOS/AppleHIDMouseAgent
-UserEvent   530 aaronchew  txt       REG               1,15     137552 1152921500312721470 /System/Library/UserEventPlugins/BluetoothUserAgent-Plugin.plugin/Contents/MacOS/BluetoothUserAgent-Plugin
-UserEvent   530 aaronchew  txt       REG               1,15     138560 1152921500312721481 /System/Library/UserEventPlugins/BonjourEvents.plugin/Contents/MacOS/BonjourEvents
-UserEvent   530 aaronchew  txt       REG               1,15     140016 1152921500312721492 /System/Library/UserEventPlugins/CaptiveUserAgent.plugin/Contents/MacOS/CaptiveUserAgent
-UserEvent   530 aaronchew  txt       REG               1,15     142656 1152921500312721503 /System/Library/UserEventPlugins/EAPOLMonitor.plugin/Contents/MacOS/EAPOLMonitor
-UserEvent   530 aaronchew  txt       REG               1,15     137344 1152921500312721631 /System/Library/UserEventPlugins/GSSNotificationForwarder.plugin/Contents/MacOS/GSSNotificationForwarder
-UserEvent   530 aaronchew  txt       REG               1,15     139408 1152921500312721642 /System/Library/UserEventPlugins/LocationMenu.plugin/Contents/MacOS/LocationMenu
-UserEvent   530 aaronchew  txt       REG               1,15     330752 1152921500312721991 /System/Library/UserEventPlugins/com.apple.cts.plugin/Contents/MacOS/com.apple.cts
-UserEvent   530 aaronchew  txt       REG               1,15     159744 1152921500312721774 /System/Library/UserEventPlugins/SCMonitor.plugin/Contents/MacOS/SCMonitor
-UserEvent   530 aaronchew  txt       REG               1,15     139408 1152921500312721959 /System/Library/UserEventPlugins/com.apple.alarm.plugin/Contents/MacOS/com.apple.alarm
-UserEvent   530 aaronchew  txt       REG               1,15     137120 1152921500312721970 /System/Library/UserEventPlugins/com.apple.bonjour.plugin/Contents/MacOS/com.apple.bonjour
-UserEvent   530 aaronchew  txt       REG               1,15     136496 1152921500312721981 /System/Library/UserEventPlugins/com.apple.cfnotification.plugin/Contents/MacOS/com.apple.cfnotification
-UserEvent   530 aaronchew  txt       REG               1,15     135824 1152921500312722012 /System/Library/UserEventPlugins/com.apple.dispatch.vfs.plugin/Contents/MacOS/com.apple.dispatch.vfs
-UserEvent   530 aaronchew  txt       REG               1,15     135984 1152921500312722002 /System/Library/UserEventPlugins/com.apple.diskarbitration.plugin/Contents/MacOS/com.apple.diskarbitration
-UserEvent   530 aaronchew  txt       REG               1,15     234832             5747833 /private/var/db/timezone/tz/2022g.1.0/icutz/icutz44l.dat
-UserEvent   530 aaronchew  txt       REG               1,15     278416 1152921500312722064 /System/Library/UserEventPlugins/com.apple.netsvcproxy.plugin/Contents/MacOS/com.apple.netsvcproxy
-UserEvent   530 aaronchew  txt       REG               1,15     137680 1152921500312722022 /System/Library/UserEventPlugins/com.apple.fsevents.matching.plugin/Contents/MacOS/com.apple.fsevents.matching
-UserEvent   530 aaronchew  txt       REG               1,15     136160 1152921500312722032 /System/Library/UserEventPlugins/com.apple.iokit.matching.plugin/Contents/MacOS/com.apple.iokit.matching
-UserEvent   530 aaronchew  txt       REG               1,15     136608 1152921500312722043 /System/Library/UserEventPlugins/com.apple.launchd.helper.plugin/Contents/MacOS/com.apple.launchd.helper
-UserEvent   530 aaronchew  txt       REG               1,15     136272 1152921500312722053 /System/Library/UserEventPlugins/com.apple.lockout.lifecycle.plugin/Contents/MacOS/com.apple.lockout.lifecycle
-UserEvent   530 aaronchew  txt       REG               1,15     173744 1152921500312722118 /System/Library/UserEventPlugins/com.apple.rcdevent.matching.plugin/Contents/MacOS/com.apple.rcdevent.matching
-UserEvent   530 aaronchew  txt       REG               1,15     135312 1152921500312722132 /System/Library/UserEventPlugins/com.apple.reachability.plugin/Contents/MacOS/com.apple.reachability
-UserEvent   530 aaronchew  txt       REG               1,15     136432 1152921500312722086 /System/Library/UserEventPlugins/com.apple.nsurlsessiond.plugin/Contents/MacOS/com.apple.nsurlsessiond
-UserEvent   530 aaronchew  txt       REG               1,15     134704 1152921500312722108 /System/Library/UserEventPlugins/com.apple.rapport.events.plugin/Contents/MacOS/com.apple.rapport.events
-UserEvent   530 aaronchew  txt       REG               1,15     135920 1152921500312722142 /System/Library/UserEventPlugins/com.apple.systemconfiguration.plugin/Contents/MacOS/com.apple.systemconfiguration
-UserEvent   530 aaronchew  txt       REG               1,15     139200 1152921500312722173 /System/Library/UserEventPlugins/com.apple.time.plugin/Contents/MacOS/com.apple.time
-UserEvent   530 aaronchew  txt       REG               1,15     136736 1152921500312722183 /System/Library/UserEventPlugins/com.apple.touchbar.matching.plugin/Contents/MacOS/com.apple.touchbar.matching
-UserEvent   530 aaronchew  txt       REG               1,15     139568 1152921500312722194 /System/Library/UserEventPlugins/com.apple.universalaccess.events.plugin/Contents/MacOS/com.apple.universalaccess.events
-UserEvent   530 aaronchew  txt       REG               1,15     136512 1152921500312722283 /System/Library/UserEventPlugins/com.apple.usernotificationcenter.matching.plugin/Contents/MacOS/com.apple.usernotificationcenter.matching
-UserEvent   530 aaronchew  txt       REG               1,15     136608 1152921500312722296 /System/Library/UserEventPlugins/routined.events.plugin/Contents/MacOS/routined.events
-UserEvent   530 aaronchew  txt       REG               1,15   30399984 1152921500312794842 /usr/share/icu/icudt70l.dat
-UserEvent   530 aaronchew    0r      CHR                3,2        0t0                 334 /dev/null
-UserEvent   530 aaronchew    1u      CHR                3,2        0t0                 334 /dev/null
-UserEvent   530 aaronchew    2u      CHR                3,2      0t569                 334 /dev/null
-UserEvent   530 aaronchew    3u     unix 0x6c507a7bbc9124fb        0t0                     ->0x6c507a7bbc91268b
-UserEvent   530 aaronchew    4u     unix 0x6c507a7bbc9121db        0t0                     ->0x6c507a7bbc9109a3
-UserEvent   530 aaronchew    5u   KQUEUE                                                   count=0, state=0x8
-UserEvent   530 aaronchew    6r      DIR               1,15       2752              254336 /Users/aaronchew/Library
-UserEvent   530 aaronchew    7r      DIR               1,15       2752              254336 /Users/aaronchew/Library
-UserEvent   530 aaronchew    8r      DIR               1,15        160               23829 /Users
-UserEvent   530 aaronchew    9r      DIR               1,15       1824              254329 /Users/aaronchew
-UserEvent   530 aaronchew   10r      DIR               1,15        608 1152921500311879682 /System/Volumes/Data
-UserEvent   530 aaronchew   11r      DIR               1,15        288 1152921500311879701 /System
-UserEvent   530 aaronchew   12r      DIR               1,15        448 1152921500312727487 /System/Volumes
-UserEvent   530 aaronchew   13   NPOLICY                                                   
-UserEvent   530 aaronchew   14r      DIR               1,15         64              254545 /private/var/folders/5g/65xm_jx94fd_h6m8dyc493hh0000gn/0/com.apple.lockoutagent
-UserEvent   530 aaronchew   15u   KQUEUE                                                   count=0, state=0x8
-UserEvent   530 aaronchew   16u    systm 0x6c507a7bbd9b0ed3        0t0                     [ctl com.apple.netsrc id 7 unit 5]
-UserEvent   530 aaronchew   17r      DIR               1,15         64              271571 /Users/aaronchew/Library/Application Support/com.apple.exchangesync
-UserEvent   530 aaronchew   18u   KQUEUE                                                   count=0, state=0x8
-UserEvent   530 aaronchew   19r      DIR               1,15         64              271571 /Users/aaronchew/Library/Application Support/com.apple.exchangesync
-UserEvent   530 aaronchew   20r      DIR               1,15       1696              254337 /Users/aaronchew/Library/Application Support
-UserEvent   530 aaronchew   21r      DIR               1,15       2752              254336 /Users/aaronchew/Library
-UserEvent   530 aaronchew   22r      DIR               1,15       1824              254329 /Users/aaronchew
-UserEvent   530 aaronchew   23r      DIR               1,15        160               23829 /Users
-UserEvent   530 aaronchew   24r      DIR               1,15        608 1152921500311879682 /System/Volumes/Data
-UserEvent   530 aaronchew   25r      DIR               1,15        448 1152921500312727487 /System/Volumes
-UserEvent   530 aaronchew   26r      DIR               1,15        288 1152921500311879701 /System
-UserEvent   530 aaronchew   27   NPOLICY                                                   
-UserEvent   530 aaronchew   28r      DIR               1,15       1056            18365173 /private/var/run
-UserEvent   530 aaronchew   29r      DIR               1,15       1120               23337 /private/var
-UserEvent   530 aaronchew   30r      DIR               1,15        192               22893 /private
-UserEvent   530 aaronchew   31r      DIR               1,15        608 1152921500311879682 /System/Volumes/Data
-UserEvent   530 aaronchew   32r      DIR               1,15        448 1152921500312727487 /System/Volumes
-UserEvent   530 aaronchew   33r      DIR               1,15        288 1152921500311879701 /System
-UserEvent   530 aaronchew   34u   KQUEUE                                                   count=0, state=0x8
-UserEvent   530 aaronchew   35r      DIR               1,15         64               23436 /private/var/db/PanicReporter
-UserEvent   530 aaronchew   36r      DIR               1,15       3360               23388 /private/var/db
-UserEvent   530 aaronchew   37r      DIR               1,15       1120               23337 /private/var
-UserEvent   530 aaronchew   38r      DIR               1,15        192               22893 /private
-UserEvent   530 aaronchew   39r      DIR               1,15        608 1152921500311879682 /System/Volumes/Data
-UserEvent   530 aaronchew   40r      DIR               1,15        448 1152921500312727487 /System/Volumes
-UserEvent   530 aaronchew   41r      DIR               1,15        288 1152921500311879701 /System
-UserEvent   530 aaronchew   42r      DIR               1,15         64               23424 /private/var/db/DiagnosticsReporter
-UserEvent   530 aaronchew   43r      DIR               1,15       3360               23388 /private/var/db
-UserEvent   530 aaronchew   44u     unix 0x6c507a7bbc9105bb        0t0                     ->0x6c507a7bbc910683
-UserEvent   530 aaronchew   45r      DIR               1,15       1120               23337 /private/var
-UserEvent   530 aaronchew   46r      DIR               1,15        192               22893 /private
-UserEvent   530 aaronchew   47r      DIR               1,15        608 1152921500311879682 /System/Volumes/Data
-UserEvent   530 aaronchew   48r      DIR               1,15        448 1152921500312727487 /System/Volumes
-UserEvent   530 aaronchew   49r      DIR               1,15        288 1152921500311879701 /System
-UserEvent   530 aaronchew   50u   KQUEUE                                                   count=0, state=0x8
-UserEvent   530 aaronchew   51r      DIR               1,15        160              287732 /Users/aaronchew/Library/studentd
-UserEvent   530 aaronchew   52r      DIR               1,15        640              262612 /Users/aaronchew/Library/Caches/com.apple.appstoreagent
-UserEvent   530 aaronchew   53r      DIR               1,15       3584              254371 /Users/aaronchew/Library/Caches
-UserEvent   530 aaronchew   54r      DIR               1,15       2752              254336 /Users/aaronchew/Library
-UserEvent   530 aaronchew   55r      DIR               1,15       1824              254329 /Users/aaronchew
-UserEvent   530 aaronchew   56r      DIR               1,15        160               23829 /Users
-UserEvent   530 aaronchew   57r      DIR               1,15        608 1152921500311879682 /System/Volumes/Data
-UserEvent   530 aaronchew   58r      DIR               1,15        448 1152921500312727487 /System/Volumes
-UserEvent   530 aaronchew   59r      DIR               1,15        288 1152921500311879701 /System
-UserEvent   530 aaronchew   60r      DIR               1,15       2752              254336 /Users/aaronchew/Library
-UserEvent   530 aaronchew   61r      DIR               1,15       1696              254337 /Users/aaronchew/Library/Application Support
-UserEvent   530 aaronchew   62r      DIR               1,15       2752              254336 /Users/aaronchew/Library
-UserEvent   530 aaronchew   63r      DIR               1,15       1824              254329 /Users/aaronchew
-UserEvent   530 aaronchew   64r      DIR               1,15        160               23829 /Users
-UserEvent   530 aaronchew   65r      DIR               1,15        608 1152921500311879682 /System/Volumes/Data
-UserEvent   530 aaronchew   66r      DIR               1,15        448 1152921500312727487 /System/Volumes
-UserEvent   530 aaronchew   67r      DIR               1,15        288 1152921500311879701 /System
-UserEvent   530 aaronchew   68r      REG               1,15          0              262630 /Users/aaronchew/Library/Caches/com.apple.appstoreagent/crossfireEnabled
-UserEvent   530 aaronchew   69r      DIR               1,15        640              262612 /Users/aaronchew/Library/Caches/com.apple.appstoreagent
-UserEvent   530 aaronchew   70r      DIR               1,15       3584              254371 /Users/aaronchew/Library/Caches
-UserEvent   530 aaronchew   71r      DIR               1,15       2752              254336 /Users/aaronchew/Library
-UserEvent   530 aaronchew   72r      DIR               1,15       1824              254329 /Users/aaronchew
-UserEvent   530 aaronchew   73r      DIR               1,15        160               23829 /Users
-UserEvent   530 aaronchew   74r      DIR               1,15        608 1152921500311879682 /System/Volumes/Data
-UserEvent   530 aaronchew   75r      DIR               1,15        448 1152921500312727487 /System/Volumes
-UserEvent   530 aaronchew   76r      DIR               1,15        288 1152921500311879701 /System
-UserEvent   530 aaronchew   77u   KQUEUE                                                   count=0, state=0x8
-UserEvent   530 aaronchew   78r      DIR               1,15       1088               23833 /Applications
-UserEvent   530 aaronchew   79r      DIR               1,15        608 1152921500311879682 /System/Volumes/Data
-UserEvent   530 aaronchew   80r      DIR               1,15        448 1152921500312727487 /System/Volumes
-UserEvent   530 aaronchew   81r      DIR               1,15        288 1152921500311879701 /System
-UserEvent   530 aaronchew   82r      DIR               1,15         96               26281 /Applications/Utilities
-UserEvent   530 aaronchew   83r      DIR               1,15       1088               23833 /Applications
-UserEvent   530 aaronchew   84r      DIR               1,15        608 1152921500311879682 /System/Volumes/Data
-UserEvent   530 aaronchew   85r      DIR               1,15        448 1152921500312727487 /System/Volumes
-UserEvent   530 aaronchew   86r      DIR               1,15        288 1152921500311879701 /System
-UserEvent   530 aaronchew   87u   KQUEUE                                                   count=0, state=0x8
-UserEvent   530 aaronchew   88r      DIR               1,15       1824              254329 /Users/aaronchew
-UserEvent   530 aaronchew   89r      DIR               1,15        128            18365172 /private/tmp
-UserEvent   530 aaronchew   90r      DIR               1,15        192               22893 /private
-UserEvent   530 aaronchew   91u   KQUEUE                                                   count=0, state=0x8
-UserEvent   530 aaronchew   92r      DIR               1,15       2752              254336 /Users/aaronchew/Library
-UserEvent   530 aaronchew   93r      DIR               1,15       2752              254336 /Users/aaronchew/Library
-UserEvent   530 aaronchew   94r      DIR               1,15       1824              254329 /Users/aaronchew
-UserEvent   530 aaronchew   95r      DIR               1,15        160               23829 /Users
-UserEvent   530 aaronchew   96r      DIR               1,15        608 1152921500311879682 /System/Volumes/Data
-UserEvent   530 aaronchew   97r      DIR               1,15        448 1152921500312727487 /System/Volumes
-UserEvent   530 aaronchew   98r      DIR               1,15        288 1152921500311879701 /System
-UserEvent   530 aaronchew   99u   KQUEUE                                                   count=0, state=0x8
-UserEvent   530 aaronchew  100r      DIR               1,15         64               23458 /private/var/db/com.apple.dt.automationmode
-UserEvent   530 aaronchew  101r      DIR               1,15         64               23458 /private/var/db/com.apple.dt.automationmode
-UserEvent   530 aaronchew  102r      DIR               1,15       3360               23388 /private/var/db
-UserEvent   530 aaronchew  103r      DIR               1,15       1120               23337 /private/var
-UserEvent   530 aaronchew  104r      DIR               1,15        192               22893 /private
-UserEvent   530 aaronchew  105r      DIR               1,15        608 1152921500311879682 /System/Volumes/Data
-UserEvent   530 aaronchew  106r      DIR               1,15        448 1152921500312727487 /System/Volumes
-UserEvent   530 aaronchew  107r      DIR               1,15        288 1152921500311879701 /System
-UserEvent   530 aaronchew  108u   KQUEUE                                                   count=0, state=0x8
-UserEvent   530 aaronchew  109r      DIR               1,15        512 1152921500312117993 /System/Library/ColorSync/Profiles
-UserEvent   530 aaronchew  110r      DIR               1,15        160 1152921500312116877 /System/Library/ColorSync
-UserEvent   530 aaronchew  111r      DIR               1,15       4544 1152921500311994199 /System/Library
-UserEvent   530 aaronchew  112r      DIR               1,15        288 1152921500311879701 /System
-UserEvent   530 aaronchew  113r      DIR               1,15        320               16686 /Library/ColorSync/Profiles
-UserEvent   530 aaronchew  114r      DIR               1,15         96               16685 /Library/ColorSync
-UserEvent   530 aaronchew  115r      DIR               1,15       2144                 476 /Library
-UserEvent   530 aaronchew  116r      DIR               1,15        608 1152921500311879682 /System/Volumes/Data
-UserEvent   530 aaronchew  117r      DIR               1,15        448 1152921500312727487 /System/Volumes
-UserEvent   530 aaronchew  118r      DIR               1,15        288 1152921500311879701 /System
-UserEvent   530 aaronchew  119r      DIR               1,15       2752              254336 /Users/aaronchew/Library
-UserEvent   530 aaronchew  120r      DIR               1,15       2752              254336 /Users/aaronchew/Library
-UserEvent   530 aaronchew  121r      DIR               1,15       1824              254329 /Users/aaronchew
-UserEvent   530 aaronchew  122r      DIR               1,15        160               23829 /Users
-UserEvent   530 aaronchew  123r      DIR               1,15        608 1152921500311879682 /System/Volumes/Data
-UserEvent   530 aaronchew  124r      DIR               1,15        448 1152921500312727487 /System/Volumes
-UserEvent   530 aaronchew  125r      DIR               1,15        288 1152921500311879701 /System
-UserEvent   530 aaronchew  126u   KQUEUE                                                   count=0, state=0x8
-UserEvent   530 aaronchew  127r      DIR               1,15       9088              254619 /Users/aaronchew/Library/Containers
-UserEvent   530 aaronchew  128r      DIR               1,15       9088              254619 /Users/aaronchew/Library/Containers
-UserEvent   530 aaronchew  129r      DIR               1,15       2752              254336 /Users/aaronchew/Library
-UserEvent   530 aaronchew  130r      DIR               1,15       1824              254329 /Users/aaronchew
-UserEvent   530 aaronchew  131r      DIR               1,15        160               23829 /Users
-UserEvent   530 aaronchew  132r      DIR               1,15        608 1152921500311879682 /System/Volumes/Data
-UserEvent   530 aaronchew  133r      DIR               1,15        448 1152921500312727487 /System/Volumes
-UserEvent   530 aaronchew  134r      DIR               1,15        288 1152921500311879701 /System
-UserEvent   530 aaronchew  135u   KQUEUE                                                   count=0, state=0x8
-UserEvent   530 aaronchew  136r      DIR               1,15       2752              254336 /Users/aaronchew/Library
-UserEvent   530 aaronchew  137r      DIR               1,15       2752              254336 /Users/aaronchew/Library
-UserEvent   530 aaronchew  138r      DIR               1,15       1824              254329 /Users/aaronchew
-UserEvent   530 aaronchew  139r      DIR               1,15        160               23829 /Users
-UserEvent   530 aaronchew  140r      DIR               1,15        608 1152921500311879682 /System/Volumes/Data
-UserEvent   530 aaronchew  141r      DIR               1,15        448 1152921500312727487 /System/Volumes
-UserEvent   530 aaronchew  142r      DIR               1,15        288 1152921500311879701 /System
-UserEvent   530 aaronchew  143u   KQUEUE                                                   count=0, state=0x8
-UserEvent   530 aaronchew  144r      DIR               1,15         96                2830 /Library/Application Support/Apple/Remote Desktop
-UserEvent   530 aaronchew  145r      DIR               1,15         96                2830 /Library/Application Support/Apple/Remote Desktop
-UserEvent   530 aaronchew  146r      DIR               1,15        352                2826 /Library/Application Support/Apple
-UserEvent   530 aaronchew  147r      DIR               1,15        448                2825 /Library/Application Support
-UserEvent   530 aaronchew  148r      DIR               1,15       2144                 476 /Library
-UserEvent   530 aaronchew  149r      DIR               1,15        608 1152921500311879682 /System/Volumes/Data
-UserEvent   530 aaronchew  150r      DIR               1,15        448 1152921500312727487 /System/Volumes
-UserEvent   530 aaronchew  151r      DIR               1,15        288 1152921500311879701 /System
-UserEvent   530 aaronchew  152u   KQUEUE                                                   count=0, state=0x8
-UserEvent   530 aaronchew  153r      DIR               1,15        160               23829 /Users
-UserEvent   530 aaronchew  154r      DIR               1,15        608 1152921500311879682 /System/Volumes/Data
-UserEvent   530 aaronchew  155r      DIR               1,15        448 1152921500312727487 /System/Volumes
-UserEvent   530 aaronchew  156r      DIR               1,15        288 1152921500311879701 /System
-UserEvent   530 aaronchew  157r      REG               1,15          0            21219778 /Users/aaronchew/Library/studentd/isConnected
-UserEvent   530 aaronchew  158r      DIR               1,15       1696              254337 /Users/aaronchew/Library/Application Support
-UserEvent   530 aaronchew  159r      DIR               1,15        640              262612 /Users/aaronchew/Library/Caches/com.apple.appstoreagent
-UserEvent   530 aaronchew  160r      DIR               1,15       1056            18365173 /private/var/run
-UserEvent   530 aaronchew  161u   KQUEUE                                                   count=0, state=0x8
-UserEvent   530 aaronchew  162r      DIR               1,15       2816              263634 /Users/aaronchew/Library/Mobile Documents
-UserEvent   530 aaronchew  163r      DIR               1,15       2752              254336 /Users/aaronchew/Library
-UserEvent   530 aaronchew  164r      DIR               1,15       1824              254329 /Users/aaronchew
-UserEvent   530 aaronchew  165r      DIR               1,15        160               23829 /Users
-UserEvent   530 aaronchew  166r      DIR               1,15        608 1152921500311879682 /System/Volumes/Data
-UserEvent   530 aaronchew  167r      DIR               1,15        448 1152921500312727487 /System/Volumes
-UserEvent   530 aaronchew  168r      DIR               1,15        288 1152921500311879701 /System
-UserEvent   530 aaronchew  169u   KQUEUE                                                   count=0, state=0x8
-UserEvent   530 aaronchew  171r      DIR               1,15       2144                 476 /Library
-UserEvent   530 aaronchew  172r      DIR               1,15        608 1152921500311879682 /System/Volumes/Data
-UserEvent   530 aaronchew  173r      DIR               1,15        448 1152921500312727487 /System/Volumes
-UserEvent   530 aaronchew  174r      DIR               1,15        288 1152921500311879701 /System
-UserEvent   530 aaronchew  175u   KQUEUE                                                   count=0, state=0x8
-UserEvent   530 aaronchew  176r      DIR               1,15         64              254370 /Users/aaronchew/Library/Services
-UserEvent   530 aaronchew  177r      DIR               1,15       2752              254336 /Users/aaronchew/Library
-UserEvent   530 aaronchew  178r      DIR               1,15       1824              254329 /Users/aaronchew
-UserEvent   530 aaronchew  179r      DIR               1,15        160               23829 /Users
-UserEvent   530 aaronchew  180r      DIR               1,15        608 1152921500311879682 /System/Volumes/Data
-UserEvent   530 aaronchew  181r      DIR               1,15        448 1152921500312727487 /System/Volumes
-UserEvent   530 aaronchew  182r      DIR               1,15        288 1152921500311879701 /System
-UserEvent   530 aaronchew  183u   KQUEUE                                                   count=0, state=0x8
-UserEvent   530 aaronchew  184r      DIR               1,15        128            18365172 /private/tmp
-UserEvent   530 aaronchew  185r      DIR               1,15        416              260989 /Users/aaronchew/Library/Caches/GeoServices
-UserEvent   530 aaronchew  186r      DIR               1,15       3584              254371 /Users/aaronchew/Library/Caches
-UserEvent   530 aaronchew  187r      DIR               1,15       2752              254336 /Users/aaronchew/Library
-UserEvent   530 aaronchew  188r      DIR               1,15       1824              254329 /Users/aaronchew
-UserEvent   530 aaronchew  189r      DIR               1,15        160               23829 /Users
-UserEvent   530 aaronchew  190r      DIR               1,15        608 1152921500311879682 /System/Volumes/Data
-UserEvent   530 aaronchew  191r      DIR               1,15        448 1152921500312727487 /System/Volumes
-UserEvent   530 aaronchew  192r      DIR               1,15        288 1152921500311879701 /System
-UserEvent   530 aaronchew  193u   KQUEUE                                                   count=0, state=0x8
-UserEvent   530 aaronchew  194r      DIR               1,15       2752              254336 /Users/aaronchew/Library
-UserEvent   530 aaronchew  195r      DIR               1,15       2752              254336 /Users/aaronchew/Library
-UserEvent   530 aaronchew  196r      DIR               1,15       1824              254329 /Users/aaronchew
-UserEvent   530 aaronchew  197r      DIR               1,15        160               23829 /Users
-UserEvent   530 aaronchew  198r      DIR               1,15        608 1152921500311879682 /System/Volumes/Data
-UserEvent   530 aaronchew  199r      DIR               1,15        448 1152921500312727487 /System/Volumes
-UserEvent   530 aaronchew  200r      DIR               1,15        288 1152921500311879701 /System
-UserEvent   530 aaronchew  201u   KQUEUE                                                   count=0, state=0x8
-UserEvent   530 aaronchew  202r      REG               1,15        218                1382 /Library/Apple/Library/Bundles/TCC_Compatibility.bundle/Contents/Resources/AllowApplicationsList.plist
-UserEvent   530 aaronchew  203r      DIR               1,15         96                1381 /Library/Apple/Library/Bundles/TCC_Compatibility.bundle/Contents/Resources
-UserEvent   530 aaronchew  204r      DIR               1,15        192                1373 /Library/Apple/Library/Bundles/TCC_Compatibility.bundle/Contents
-UserEvent   530 aaronchew  205r      DIR               1,15         96                1372 /Library/Apple/Library/Bundles/TCC_Compatibility.bundle
-UserEvent   530 aaronchew  206r      DIR               1,15        192                 496 /Library/Apple/Library/Bundles
-UserEvent   530 aaronchew  207r      DIR               1,15         96                 495 /Library/Apple/Library
-UserEvent   530 aaronchew  208r      DIR               1,15        160                 477 /Library/Apple
-UserEvent   530 aaronchew  209r      DIR               1,15       2144                 476 /Library
-UserEvent   530 aaronchew  210r      DIR               1,15        608 1152921500311879682 /System/Volumes/Data
-UserEvent   530 aaronchew  211r      DIR               1,15        448 1152921500312727487 /System/Volumes
-UserEvent   530 aaronchew  212r      DIR               1,15        288 1152921500311879701 /System
-UserEvent   530 aaronchew  213r      DIR               1,15        160 1152921500312664047 /System/Library/Sandbox
-UserEvent   530 aaronchew  214r      DIR               1,15        160 1152921500312664047 /System/Library/Sandbox
-UserEvent   530 aaronchew  215r      DIR               1,15       4544 1152921500311994199 /System/Library
-UserEvent   530 aaronchew  216r      DIR               1,15        288 1152921500311879701 /System
-UserEvent   530 aaronchew  217r      DIR               1,15       2144                 476 /Library
-UserEvent   530 aaronchew  218r      DIR               1,15        448                2825 /Library/Application Support
-UserEvent   530 aaronchew  219r      DIR               1,15       2144                 476 /Library
-UserEvent   530 aaronchew  220r      DIR               1,15        608 1152921500311879682 /System/Volumes/Data
-UserEvent   530 aaronchew  221r      DIR               1,15        448 1152921500312727487 /System/Volumes
-UserEvent   530 aaronchew  222r      DIR               1,15        288 1152921500311879701 /System
-UserEvent   530 aaronchew  223r      DIR               1,15        416              260989 /Users/aaronchew/Library/Caches/GeoServices
-UserEvent   530 aaronchew  224r      DIR               1,15        448                2825 /Library/Application Support
-UserEvent   530 aaronchew  237u    systm 0x6c507a7bbd9b0fd3        0t0                     [ctl com.apple.flow-divert id 1 unit 1]
-UserEvent   530 aaronchew  238u    systm 0x6c507a7bbd9b22d3        0t0                     [ctl com.apple.net.netagent id 2 unit 15]
-UserEvent   530 aaronchew  239u    systm 0x6c507a7bbd9b2353        0t0                     [ctl com.apple.net.netagent id 2 unit 16]
-UserEvent   530 aaronchew  240u    systm 0x6c507a7bbd9b23d3        0t0                     [ctl com.apple.net.netagent id 2 unit 17]
-UserEvent   530 aaronchew  241u    systm 0x6c507a7bbd9b17d3        0t0                     [ctl com.apple.net.netagent id 2 unit 18]
-UserEvent   530 aaronchew  242u    systm 0x6c507a7bbd9b3453        0t0                     [ctl com.apple.net.netagent id 2 unit 19]
-UserEvent   530 aaronchew  243u    systm 0x6c507a7bbd9b34d3        0t0                     [ctl com.apple.net.netagent id 2 unit 20]
-UserEvent   530 aaronchew  244u    systm 0x6c507a7bbd9b3553        0t0                     [ctl com.apple.net.netagent id 2 unit 21]
-UserEvent   530 aaronchew  245u    systm 0x6c507a7bbd9b30d3        0t0                     [ctl com.apple.net.netagent id 2 unit 22]
-UserEvent   530 aaronchew  246u    systm 0x6c507a7bbd9b32d3        0t0                     [ctl com.apple.net.netagent id 2 unit 23]
-UserEvent   530 aaronchew  247u    systm 0x6c507a7bbd9b35d3        0t0                     [ctl com.apple.net.netagent id 2 unit 24]
-UserEvent   530 aaronchew  248u    systm 0x6c507a7bbd9b36d3        0t0                     [ctl com.apple.net.netagent id 2 unit 26]
-UserEvent   530 aaronchew  249u    systm 0x6c507a7bbd9b2bd3        0t0                     [ctl com.apple.net.netagent id 2 unit 25]
-lsd         535 aaronchew  cwd       DIR               1,15        640                   2 /
-lsd         535 aaronchew  txt       REG               1,15     137680 1152921500312789181 /usr/libexec/lsd
-lsd         535 aaronchew  txt       REG               1,15      46944            18365205 /Library/Preferences/Logging/.plist-cache.UFiUklID
-lsd         535 aaronchew  txt       REG               1,15      32768             8431101 /private/var/db/mds/messages/501/se_SecurityMessages
-lsd         535 aaronchew  txt       REG               1,15     234832             5747833 /private/var/db/timezone/tz/2022g.1.0/icutz/icutz44l.dat
-lsd         535 aaronchew  txt       REG               1,15     116763            27505396 /private/var/db/analyticsd/events.allowlist
-lsd         535 aaronchew  txt       REG               1,15     443920 1152921500312329445 /System/Library/Frameworks/Security.framework/Versions/A/PlugIns/csparser.bundle/Contents/MacOS/csparser
-lsd         535 aaronchew  txt       REG               1,15    2177216 1152921500312782999 /usr/lib/dyld
-lsd         535 aaronchew  txt       REG               1,15    6389760            27668947 /private/var/folders/5g/65xm_jx94fd_h6m8dyc493hh0000gn/0/com.apple.LaunchServices.dv/com.apple.LaunchServices-3027-v2.csstore
-lsd         535 aaronchew  txt       REG               1,15   30399984 1152921500312794842 /usr/share/icu/icudt70l.dat
-lsd         535 aaronchew    0r      CHR                3,2        0t0                 334 /dev/null
-lsd         535 aaronchew    1u      CHR                3,2        0t0                 334 /dev/null
-lsd         535 aaronchew    2u      CHR                3,2        0t0                 334 /dev/null
-lsd         535 aaronchew    3u      REG               1,15      12288              257886 /private/var/folders/5g/65xm_jx94fd_h6m8dyc493hh0000gn/0/com.apple.LaunchServices.dv/com.apple.LaunchServices.trustedsignatures-501.db
-rapportd    539 aaronchew  cwd       DIR               1,15        640                   2 /
-rapportd    539 aaronchew  txt       REG               1,15    1597232 1152921500312789379 /usr/libexec/rapportd
-rapportd    539 aaronchew  txt       REG               1,15      46944            18365205 /Library/Preferences/Logging/.plist-cache.UFiUklID
-rapportd    539 aaronchew  txt       REG               1,15     234832             5747833 /private/var/db/timezone/tz/2022g.1.0/icutz/icutz44l.dat
-rapportd    539 aaronchew  txt       REG               1,15      92240 1152921500312489686 /System/Library/PrivateFrameworks/CorePhoneNumbers.framework/Versions/A/Resources/CorePhoneNumbers.ruleset
-rapportd    539 aaronchew  txt       REG               1,15     116763            27505396 /private/var/db/analyticsd/events.allowlist
-rapportd    539 aaronchew  txt       REG               1,15    2177216 1152921500312782999 /usr/lib/dyld
-rapportd    539 aaronchew  txt       REG               1,15   30399984 1152921500312794842 /usr/share/icu/icudt70l.dat
-rapportd    539 aaronchew    0r      CHR                3,2        0t0                 334 /dev/null
-rapportd    539 aaronchew    1u      CHR                3,2        0t0                 334 /dev/null
-rapportd    539 aaronchew    2u      CHR                3,2        0t0                 334 /dev/null
-rapportd    539 aaronchew    3u     IPv4 0x6c507a7bb779f36b        0t0                 TCP *:51067 (LISTEN)
-rapportd    539 aaronchew    4u     IPv6 0x6c507a7bbbeb92f3        0t0                 TCP *:51067 (LISTEN)
-rapportd    539 aaronchew    5u     IPv4 0x6c507a85564a1483        0t0                 UDP *:*
-rapportd    539 aaronchew    6u     IPv4 0x6c507a85564a1aa3        0t0                 UDP *:*
-rapportd    539 aaronchew    7u     unix 0x6c507a7bbc913243        0t0                     ->0x6c507a7bbc91330b
-rapportd    539 aaronchew    8u     unix 0x6c507a7bbc90d0bb        0t0                     ->0x6c507a7bbc90d183
-rapportd    539 aaronchew    9u     unix 0x6c507a7bbc90d88b        0t0                     ->0x6c507a7bbc90decb
-rapportd    539 aaronchew   10u     IPv4 0x6c507a855649e693        0t0                 UDP *:*
-rapportd    539 aaronchew   12u     IPv6 0x6c507a853c82e9f3        0t0                 UDP *:xserveraid
-rapportd    539 aaronchew   13u     IPv4 0x6c507a85564a3633        0t0                 UDP *:*
-^[[C^[[A^[[A^X^C
-[1m[7m%[27m[1m[0m                                                                                                                                                                          ]2;aaronchew@Aarons-MacBook-Pro-2:~/CodeProjects/AA_Bundler-4/localfork]1;..r-4/localfork[0m[27m[24m[J[01;31m➜  [36mlocalfork[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004h[32mlsof[39m -i tcp:8545[?1l>[?2004l
-]2;lsof -i tcp:8545]1;lsof[1m[7m%[27m[1m[0m                                                                                                                                                                          ]2;aaronchew@Aarons-MacBook-Pro-2:~/CodeProjects/AA_Bundler-4/localfork]1;..r-4/localfork[0m[27m[24m[J[01;31m➜  [36mlocalfork[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004h[32mlsof[39m -i tcp:8545[11D           [12D -i tcp:8545[16D[32mn[32mp[32mx[39m[39m hardhat node --fork [33m"https://eth-mainnet.g.alchemy.com/v2/lcA7Kyqv42J1Qh-wLm__DdqSCJBtZyd1"[39m[95D[32mo[32ms[32ma[32ms[32mc[32mr[32mi[32mp[32mt[39m -e [33m'[33mt[33me[33ml[33ml[33m [33ma[33mp[33mp[33m [33m"[33mT[33me[33mr[33mm[33mi[33mn[33ma[33ml[33m"[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m 
-[33m    do script "npx hardhat node --fork \"https://eth-mainnet.g.alchemy.com/v2/lcA7Kyqv42J1Qh-wLm__DdqSCJBtZyd1\""[39m[K
-[33mend tell'[39m[K[A[A[50C[33D[32mn[32mp[32mx[39m[39m [39mh[39ma[39mr[39md[39mhat n[39mo[39md[39me[39m [39m-[39m-[39mf[39mo[39mr[39mk[39m [33m"[33mh[33mt[33mt[33mp[33ms[33m:[33m/[33m/[33meth-mainnet.g.alchemy.com/v2/lcA7Kyqv42J1Qh-wLm__DdqSCJBtZyd1"[39m[1B[K[1B[K[A[A[121C[95D[32m.[32m/[32ms[32me[32mt[32mu[32mp[32m.[32ms[32mh[39m              [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [85D[?1l>[?2004l[1B]2;./setup.sh]1;./setup.sh60:65: syntax error: Expected end of line but found identifier. (-2741)
-/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/@ethersproject/logger/lib/index.js:238
-        var error = new Error(message);
-                    ^
-
-Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
-    at Logger.makeError (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/logger/lib/index.js:238:21)
-    at Logger.throwError (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/logger/lib/index.js:247:20)
-    at JsonRpcProvider.<anonymous> (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:609:54)
-    at step (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:48:23)
-    at Object.throw (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:29:53)
-    at rejected (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:21:65)
-[90m    at processTicksAndRejections (node:internal/process/task_queues:96:5)[39m {
-  reason: [32m'could not detect network'[39m,
-  code: [32m'NETWORK_ERROR'[39m,
-  event: [32m'noNetwork'[39m
-}
-c^C
-[1m[7m%[27m[1m[0m                                                                                                                                                                          ]2;aaronchew@Aarons-MacBook-Pro-2:~/CodeProjects/AA_Bundler-4/localfork]1;..r-4/localfork[0m[27m[24m[J[01;31m➜  [36mlocalfork[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004h[32m./setup.sh[39m[?1l>[?2004l
-]2;./setup.sh]1;./setup.shnpx hardhat node --fork "https://eth-mainnet.g.alchemy.com/v2/lcA7Kyqv42J1Qh-wLm__DdqSCJBtZyd1"
-/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/@ethersproject/logger/lib/index.js:238
-        var error = new Error(message);
-                    ^
-
-Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
-    at Logger.makeError (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/logger/lib/index.js:238:21)
-    at Logger.throwError (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/logger/lib/index.js:247:20)
-    at JsonRpcProvider.<anonymous> (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:609:54)
-    at step (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:48:23)
-    at Object.throw (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:29:53)
-    at rejected (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:21:65)
-[90m    at processTicksAndRejections (node:internal/process/task_queues:96:5)[39m {
-  reason: [32m'could not detect network'[39m,
-  code: [32m'NETWORK_ERROR'[39m,
-  event: [32m'noNetwork'[39m
-}
-/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/@ethersproject/logger/lib/index.js:238
-        var error = new Error(message);
-                    ^
-
-Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
-    at Logger.makeError (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/logger/lib/index.js:238:21)
-    at Logger.throwError (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/logger/lib/index.js:247:20)
-    at JsonRpcProvider.<anonymous> (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:609:54)
-    at step (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:48:23)
-    at Object.throw (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:29:53)
-    at rejected (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:21:65)
-[90m    at processTicksAndRejections (node:internal/process/task_queues:96:5)[39m {
-  reason: [32m'could not detect network'[39m,
-  code: [32m'NETWORK_ERROR'[39m,
-  event: [32m'noNetwork'[39m
-}
-yarn run bundler --network "http://127.0.0.1:8545" --entryPoint "0x59C4e2c6a6dC27c259D6d067a039c831e1ff4947"
-[2K[1G[1myarn run v1.22.19[22m
-[2K[1G[2m$ yarn --cwd packages/bundler bundler --network http://127.0.0.1:8545 --entryPoint 0x59C4e2c6a6dC27c259D6d067a039c831e1ff4947[22m
-[2K[1G[2m$ ts-node ./src/exec.ts --config ./localconfig/bundler.config.json --network http://127.0.0.1:8545 --entryPoint 0x59C4e2c6a6dC27c259D6d067a039c831e1ff4947[22m
-command-line arguments:  {
-  gasFactor: [32m'1'[39m,
-  port: [32m'3000'[39m,
-  config: [32m'./localconfig/bundler.config.json'[39m,
-  network: [32m'http://127.0.0.1:8545'[39m,
-  entryPoint: [32m'0x59C4e2c6a6dC27c259D6d067a039c831e1ff4947'[39m
-}
-Merged configuration: {"port":"3000","helper":"0x780EcF3a794E9eb2b8C9baA6d8C4Ff36EFba770C","entryPoint":"0x59C4e2c6a6dC27c259D6d067a039c831e1ff4947","gasFactor":"1","network":"http://127.0.0.1:8545","beneficiary":"0xB1d3BD3E33ec9A3A15C364C441D023a73f1729F6","minBalance":"1","mnemonic":"./localconfig/mnemonic.txt"}
-listen
-/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/@ethersproject/logger/src.ts/index.ts:269
-        const error: any = new Error(message);
-                           ^
-Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
-    at Logger.makeError (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/logger/src.ts/index.ts:269:28)
-    at Logger.throwError (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/logger/src.ts/index.ts:281:20)
-    at JsonRpcProvider.<anonymous> (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/src.ts/json-rpc-provider.ts:483:23)
-    at step (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:48:23)
-    at Object.throw (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:29:53)
-    at rejected (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:21:65)
-[90m    at processTicksAndRejections (node:internal/process/task_queues:96:5)[39m {
-  reason: [32m'could not detect network'[39m,
-  code: [32m'NETWORK_ERROR'[39m,
-  event: [32m'noNetwork'[39m
-}
-[2K[1G[31merror[39m Command failed with exit code 1.
-[2K[1G[34minfo[39m Visit [1mhttps://yarnpkg.com/en/docs/cli/run[22m for documentation about this command.
-[2K[1G[31merror[39m Command failed with exit code 1.
-[2K[1G[34minfo[39m Visit [1mhttps://yarnpkg.com/en/docs/cli/run[22m for documentation about this command.
-[1m[7m%[27m[1m[0m                                                                                                                                                                          ]2;aaronchew@Aarons-MacBook-Pro-2:~/CodeProjects/AA_Bundler-4/localfork]1;..r-4/localfork[0m[27m[24m[J[01;31m➜  [36mlocalfork[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004h[32ml[39m[32ml[39m[90msof -i tcp:8545[39m[15D[32ml[32ms[39m[1m[31ml[1m[31ms[1m[31mo[0m[39m[0m[32ml[0m[32ms[0m[32mo[32mf[39m[39m [39m-[39mi[39m [39mt[39mc[39mp[39m:[39m8[39m5[39m4[39m5[11D           [12D -i tcp:8545[?1l>[?2004l
-]2;lsof -i tcp:8545]1;lsof[1m[7m%[27m[1m[0m                                                                                                                                                                          ]2;aaronchew@Aarons-MacBook-Pro-2:~/CodeProjects/AA_Bundler-4/localfork]1;..r-4/localfork[0m[27m[24m[J[01;31m➜  [36mlocalfork[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004h[32mlsof[39m -i tcp:8545[?1l>[?2004l
-]2;lsof -i tcp:8545]1;lsof[1m[7m%[27m[1m[0m                                                                                                                                                                          ]2;aaronchew@Aarons-MacBook-Pro-2:~/CodeProjects/AA_Bundler-4/localfork]1;..r-4/localfork[0m[27m[24m[J[01;31m➜  [36mlocalfork[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004h[32mlsof[39m -i tcp:8545[?1l>[?2004l
-]2;lsof -i tcp:8545]1;lsof[1m[7m%[27m[1m[0m                                                                                                                                                                          ]2;aaronchew@Aarons-MacBook-Pro-2:~/CodeProjects/AA_Bundler-4/localfork]1;..r-4/localfork[0m[27m[24m[J[01;31m➜  [36mlocalfork[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004h[32mlsof[39m -i tcp:8545[16D[32m.[32m/[32ms[32me[32mt[32mu[32mp[32m.[32ms[32mh[39m      [?1l>[?2004l
-]2;./setup.sh]1;./setup.shnpx hardhat node --fork "https://eth-mainnet.g.alchemy.com/v2/lcA7Kyqv42J1Qh-wLm__DdqSCJBtZyd1"
-[1m[7m%[27m[1m[0m                                                                                                                                                                          ]2;aaronchew@Aarons-MacBook-Pro-2:~/CodeProjects/AA_Bundler-4/localfork]1;..r-4/localfork[0m[27m[24m[J[01;32m➜  [36mlocalfork[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004h[32m./setup.sh[39m[10D[32ml[32ms[32mo[32mf[39m[39m [39m-[39mi[39m [39mt[39mcp:8545[?1l>[?2004l
-]2;lsof -i tcp:8545]1;lsof[1m[7m%[27m[1m[0m                                                                                                                                                                          ]2;aaronchew@Aarons-MacBook-Pro-2:~/CodeProjects/AA_Bundler-4/localfork]1;..r-4/localfork[0m[27m[24m[J[01;31m➜  [36mlocalfork[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004h[1m[31mp[0m[39m[1m[31mp[0m[39m[90mwd[39m[1m[31mp[1m[31mw[0m[39m[0m[32mp[0m[32mw[32md[39m[?1l>[?2004l
-]2;pwd]1;pwd/Users/aaronchew/CodeProjects/AA_Bundler-4/localfork
-[1m[7m%[27m[1m[0m                                                                                                                                                                          ]2;aaronchew@Aarons-MacBook-Pro-2:~/CodeProjects/AA_Bundler-4/localfork]1;..r-4/localfork[0m[27m[24m[J[01;32m➜  [36mlocalfork[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004h[32mpwd[39m[32ml[32ms[32mo[32mf[39m -i tcp:8545[16D[32m.[32m/[32ms[32me[32mt[32mu[32mp[32m.[32ms[32mh[39m      [10D[32ml[32ms[32mo[32mf[39m[39m [39m-[39mi[39m [39mt[39mcp:8545[16D[32m.[32m/[32ms[32me[32mt[32mu[32mp[32m.[32ms[32mh[39m      [?1l>[?2004l
-]2;./setup.sh]1;./setup.sh/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/@ethersproject/logger/lib/index.js:238
-        var error = new Error(message);
-                    ^
-
-Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
-    at Logger.makeError (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/logger/lib/index.js:238:21)
-    at Logger.throwError (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/logger/lib/index.js:247:20)
-    at JsonRpcProvider.<anonymous> (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:609:54)
-    at step (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:48:23)
-    at Object.throw (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:29:53)
-    at rejected (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:21:65)
-[90m    at processTicksAndRejections (node:internal/process/task_queues:96:5)[39m {
-  reason: [32m'could not detect network'[39m,
-  code: [32m'NETWORK_ERROR'[39m,
-  event: [32m'noNetwork'[39m
-}
-/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/@ethersproject/logger/lib/index.js:238
-        var error = new Error(message);
-                    ^
-
-Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
-    at Logger.makeError (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/logger/lib/index.js:238:21)
-    at Logger.throwError (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/logger/lib/index.js:247:20)
-    at JsonRpcProvider.<anonymous> (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:609:54)
-    at step (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:48:23)
-    at Object.throw (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:29:53)
-    at rejected (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:21:65)
-[90m    at processTicksAndRejections (node:internal/process/task_queues:96:5)[39m {
-  reason: [32m'could not detect network'[39m,
-  code: [32m'NETWORK_ERROR'[39m,
-  event: [32m'noNetwork'[39m
-}
-yarn run bundler --network "http://127.0.0.1:8545" --entryPoint "0x59C4e2c6a6dC27c259D6d067a039c831e1ff4947"
-[2K[1G[1myarn run v1.22.19[22m
-[2K[1G[2m$ yarn --cwd packages/bundler bundler --network http://127.0.0.1:8545 --entryPoint 0x59C4e2c6a6dC27c259D6d067a039c831e1ff4947[22m
-[2K[1G[2m$ ts-node ./src/exec.ts --config ./localconfig/bundler.config.json --network http://127.0.0.1:8545 --entryPoint 0x59C4e2c6a6dC27c259D6d067a039c831e1ff4947[22m
-command-line arguments:  {
-  gasFactor: [32m'1'[39m,
-  port: [32m'3000'[39m,
-  config: [32m'./localconfig/bundler.config.json'[39m,
-  network: [32m'http://127.0.0.1:8545'[39m,
-  entryPoint: [32m'0x59C4e2c6a6dC27c259D6d067a039c831e1ff4947'[39m
-}
-Merged configuration: {"port":"3000","helper":"0x780EcF3a794E9eb2b8C9baA6d8C4Ff36EFba770C","entryPoint":"0x59C4e2c6a6dC27c259D6d067a039c831e1ff4947","gasFactor":"1","network":"http://127.0.0.1:8545","beneficiary":"0xB1d3BD3E33ec9A3A15C364C441D023a73f1729F6","minBalance":"1","mnemonic":"./localconfig/mnemonic.txt"}
-listen
-/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/@ethersproject/logger/src.ts/index.ts:269
-        const error: any = new Error(message);
-                           ^
-Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
-    at Logger.makeError (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/logger/src.ts/index.ts:269:28)
-    at Logger.throwError (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/logger/src.ts/index.ts:281:20)
-    at JsonRpcProvider.<anonymous> (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/src.ts/json-rpc-provider.ts:483:23)
-    at step (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:48:23)
-    at Object.throw (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:29:53)
-    at rejected (/Users/aaronchew/CodeProjects/AA_Bundler-4/node_modules/[4m@ethersproject[24m/providers/lib/json-rpc-provider.js:21:65)
-[90m    at processTicksAndRejections (node:internal/process/task_queues:96:5)[39m {
-  reason: [32m'could not detect network'[39m,
-  code: [32m'NETWORK_ERROR'[39m,
-  event: [32m'noNetwork'[39m
-}
-[2K[1G[31merror[39m Command failed with exit code 1.
-[2K[1G[34minfo[39m Visit [1mhttps://yarnpkg.com/en/docs/cli/run[22m for documentation about this command.
-[2K[1G[31merror[39m Command failed with exit code 1.
-[2K[1G[34minfo[39m Visit [1mhttps://yarnpkg.com/en/docs/cli/run[22m for documentation about this command.
-[1m[7m%[27m[1m[0m                                                                                                                                                                          ]2;aaronchew@Aarons-MacBook-Pro-2:~/CodeProjects/AA_Bundler-4/localfork]1;..r-4/localfork[0m[27m[24m[J[01;31m➜  [36mlocalfork[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004h

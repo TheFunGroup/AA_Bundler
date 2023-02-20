@@ -12,8 +12,7 @@ import { UserOpMethodHandler } from './UserOpMethodHandler'
 import { Server } from 'http'
 import { RpcError } from './utils'
 const forkConfig = require('../../../localfork/forkConfig.json')
-
-
+const { LOCALHOST_URL, HARDHAT_FORK_CHAIN_ID } = require('../../../localfork/ForkUtils')
 
 export class BundlerServer {
   app: Express
@@ -82,9 +81,9 @@ export class BundlerServer {
       chain
     } = req.body
     try {
-      if (chain == "31337") {
-        res.send( {
-          rpcdata: { bundlerUrl: "http://localhost:3000/rpc" },
+      if (chain == HARDHAT_FORK_CHAIN_ID) {
+        res.send({
+          rpcdata: { bundlerUrl: `${LOCALHOST_URL}url` },
           aaData: {
             entryPointAddress: forkConfig.entryPointAddress,
             factoryAddress: forkConfig.factoryAddress,
@@ -92,12 +91,14 @@ export class BundlerServer {
           }
         })
       }
-      else throw "Only Hardhat Chain 31337 is supported"
+      else {
+        throw "Only Hardhat Chain 31337 is supported"
+      }
     } catch (err: any) {
       res.status(400).send(err.message)
     }
   }
-  
+
   async rpc(req: Request, res: Response): Promise<void> {
     const {
       method,
