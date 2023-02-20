@@ -11,7 +11,7 @@ import { BundlerConfig } from './BundlerConfig'
 import { UserOpMethodHandler } from './UserOpMethodHandler'
 import { Server } from 'http'
 import { RpcError } from './utils'
-const TestConfig = require('./TestConfig.json')
+const TestConfig = require('../localfork/TestConfig.json')
 
 
 
