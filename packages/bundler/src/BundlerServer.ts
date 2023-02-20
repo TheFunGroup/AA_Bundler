@@ -11,7 +11,7 @@ import { BundlerConfig } from './BundlerConfig'
 import { UserOpMethodHandler } from './UserOpMethodHandler'
 import { Server } from 'http'
 import { RpcError } from './utils'
-const TestConfig = require('../../../localfork/TestConfig.json')
+const forkConfig = require('../../../localfork/forkConfig.json')
 
 
 
@@ -86,9 +86,9 @@ export class BundlerServer {
         res.send( {
           rpcdata: { bundlerUrl: "http://localhost:3000/rpc" },
           aaData: {
-            entryPointAddress: TestConfig.entryPointAddress,
-            factoryAddress: TestConfig.factoryAddress,
-            verificationAddress: TestConfig.verificationAddress
+            entryPointAddress: forkConfig.entryPointAddress,
+            factoryAddress: forkConfig.factoryAddress,
+            verificationAddress: forkConfig.verificationAddress
           }
         })
       }
