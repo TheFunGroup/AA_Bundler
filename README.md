@@ -28,6 +28,7 @@ Error: test/Flow.test.ts(7,30): error TS2307: Cannot find module '../src/SimpleA
 
 ```
 cd localfork
+yarn install 
 chmod +x setup.sh
 ./setup.sh
 ```
