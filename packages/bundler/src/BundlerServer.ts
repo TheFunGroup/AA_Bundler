@@ -11,6 +11,9 @@ import { BundlerConfig } from './BundlerConfig'
 import { UserOpMethodHandler } from './UserOpMethodHandler'
 import { Server } from 'http'
 import { RpcError } from './utils'
+const TestConfig = require('./TestConfig.json')
+
+
 
 export class BundlerServer {
   app: Express
@@ -31,6 +34,9 @@ export class BundlerServer {
 
     // eslint-disable-next-line @typescript-eslint/no-misused-promises
     this.app.post('/rpc', this.rpc.bind(this))
+
+    // console.log('testconfig ', TestConfig)
+    this.app.post('/get-chain-info', this.getChainInfo.bind(this))
 
     this.httpServer = this.app.listen(3000, "0.0.0.0", () => { console.log("listen") })
     this.startingPromise = this._preflightCheck()
@@ -60,6 +66,8 @@ export class BundlerServer {
     }
   }
 
+
+
   fatal(msg: string): never {
     console.error('FATAL:', msg)
     process.exit(1)
@@ -69,6 +77,27 @@ export class BundlerServer {
     res.send(`Account-Abstraction Bundler v.${erc4337RuntimeVersion}. please use "/rpc"`)
   }
 
+  async getChainInfo(req: Request, res: Response): Promise<any> {
+    const {
+      chain
+    } = req.body
+    try {
+      if (chain == "31337") {
+        res.send( {
+          rpcdata: { bundlerUrl: "http://localhost:3000/rpc" },
+          aaData: {
+            entryPointAddress: TestConfig.entryPointAddress,
+            factoryAddress: TestConfig.factoryAddress,
+            verificationAddress: TestConfig.verificationAddress
+          }
+        })
+      }
+      else throw "Only Hardhat Chain 31337 is supported"
+    } catch (err: any) {
+      res.status(400).send(err.message)
+    }
+  }
+  
   async rpc(req: Request, res: Response): Promise<void> {
     const {
       method,
