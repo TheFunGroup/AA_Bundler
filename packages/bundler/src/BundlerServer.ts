@@ -81,9 +81,9 @@ export class BundlerServer {
       chain
     } = req.body
     try {
-      if (chain == HARDHAT_FORK_CHAIN_ID) {
+      if (chain === HARDHAT_FORK_CHAIN_ID) {
         res.send({
-          rpcdata: { bundlerUrl: `${LOCALHOST_URL}url` },
+          rpcdata: { bundlerUrl: `${LOCALHOST_URL}rpc` },
           aaData: {
             entryPointAddress: forkConfig.entryPointAddress,
             factoryAddress: forkConfig.factoryAddress,
