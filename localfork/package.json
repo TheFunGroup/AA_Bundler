@@ -1,0 +1,16 @@
+{
+  "name": "localfork",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ForkSetup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fun-wallet/sdk": "^0.1.0",
+    "@nomiclabs/hardhat-waffle": "^2.0.5",
+    "ethers": "^6.0.5"
+  }
+}
