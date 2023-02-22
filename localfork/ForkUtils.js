@@ -2,6 +2,7 @@ const hre = require("hardhat");
 const { ethers } = hre
 
 const HARDHAT_FORK_CHAIN_ID = 31337
+const HARDHAT_FORK_CHAIN_ID_STRING ="31337"
 const RPC_URL = "http://127.0.0.1:8545"
 const PRIV_KEY = "0x66f37ee92a08eebb5da72886f3c1280d5d1bd5eb8039f52fdb8062df7e364206"
 const PKEY = "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
@@ -75,5 +76,5 @@ const loadPaymaster = (address, provider) => {
 
 module.exports = {
     transferAmt, getAddrBalanceErc, timeout, getBalance, execContractFunc, loadPaymaster, logUserPaymasterBalance,
-    getUserBalanceErc, createErc, logPairing, CHAINLINK_TOKEN_AGGREGATOR_ADDRESS, HARDHAT_FORK_CHAIN_ID, RPC_URL, PRIV_KEY, PKEY, DAI_ADDR, API_KEY, USDC_ADDR, AVAX_CHAIN_ID, AVAX_RPC_URL, USDC_AVAX_ADDR, LOCALHOST_URL, AVAX_RECEIVE_PKEY
+    getUserBalanceErc, createErc, logPairing, HARDHAT_FORK_CHAIN_ID_STRING, CHAINLINK_TOKEN_AGGREGATOR_ADDRESS, HARDHAT_FORK_CHAIN_ID, RPC_URL, PRIV_KEY, PKEY, DAI_ADDR, API_KEY, USDC_ADDR, AVAX_CHAIN_ID, AVAX_RPC_URL, USDC_AVAX_ADDR, LOCALHOST_URL, AVAX_RECEIVE_PKEY
 }

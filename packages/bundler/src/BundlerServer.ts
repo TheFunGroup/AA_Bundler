@@ -12,7 +12,7 @@ import { UserOpMethodHandler } from './UserOpMethodHandler'
 import { Server } from 'http'
 import { RpcError } from './utils'
 const forkConfig = require('../../../localfork/forkConfig.json')
-const { LOCALHOST_URL, HARDHAT_FORK_CHAIN_ID } = require('../../../localfork/ForkUtils')
+const { LOCALHOST_URL, HARDHAT_FORK_CHAIN_ID_STRING } = require('../../../localfork/ForkUtils')
 
 export class BundlerServer {
   app: Express
@@ -36,7 +36,7 @@ export class BundlerServer {
 
     // console.log('testconfig ', TestConfig)
     this.app.post('/get-chain-info', this.getChainInfo.bind(this))
-
+    this.app.post('/get-module-info', this.getModuleInfo.bind(this))
     this.httpServer = this.app.listen(3000, "0.0.0.0", () => { console.log("listen") })
     this.startingPromise = this._preflightCheck()
   }
@@ -76,18 +76,68 @@ export class BundlerServer {
     res.send(`Account-Abstraction Bundler v.${erc4337RuntimeVersion}. please use "/rpc"`)
   }
 
+
+  async getModuleInfo(req: Request, res: Response): Promise<any> {
+    const {
+      chain,
+      module
+    } = req.body
+    try {
+      if (chain === HARDHAT_FORK_CHAIN_ID_STRING) {
+        if (module === "eoaAaveWithdraw") {
+          res.send({
+            eoaAaveWithdrawAddress: forkConfig.eoaAaveWithdrawAddress
+          })
+        }
+        else if (module === "tokenSwap") {
+          res.send({
+            tokenSwapAddress: forkConfig.tokenSwapAddress,
+            univ3router: forkConfig.uniswapV3RouterAddress,
+            univ3quoter: forkConfig.quoterContractAddress,
+            univ3factory: forkConfig.poolFactoryAddress
+          })
+        }
+        else{
+          throw "Module is not supported"
+        }
+      }
+      else {
+        throw "Only Hardhat Chain 31337 is supported"
+      }
+    } catch (err: any) {
+      res.status(400).send(err.message)
+    }
+  }
+
+
   async getChainInfo(req: Request, res: Response): Promise<any> {
     const {
       chain
     } = req.body
     try {
-      if (chain === HARDHAT_FORK_CHAIN_ID) {
+      if (chain === HARDHAT_FORK_CHAIN_ID_STRING) {
         res.send({
+          currency: 'ETH',
           rpcdata: { bundlerUrl: `${LOCALHOST_URL}rpc` },
           aaData: {
             entryPointAddress: forkConfig.entryPointAddress,
             factoryAddress: forkConfig.factoryAddress,
             verificationAddress: forkConfig.verificationAddress
+          },
+          moduleAddresses: {
+            eoaAaveWithdraw: {
+              eoaAaveWithdrawAddress: forkConfig.eoaAaveWithdrawAddress,
+            },
+            paymaster: {
+              paymasterAddress: forkConfig.paymasterAddress,
+              oracle: forkConfig.tokenPriceOracleAddress
+            },
+            tokenSwap: {
+              univ3factory: forkConfig.poolFactoryAddress,
+              univ3quoter: forkConfig.quoterContractAddress,
+              univ3router: forkConfig.uniswapV3RouterAddress,
+              tokenSwapAddress: forkConfig.tokenSwapAddress,
+            }
           }
         })
       }
