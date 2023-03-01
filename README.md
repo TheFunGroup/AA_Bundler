@@ -2,10 +2,21 @@
 
 Starting point: `/AA-Bundler`
 
+#### Install packages
+
+```
+yarn && yarn preprocess
+```
+Ignore this error
+
+```javascript
+Error: test/Flow.test.ts(7,30): error TS2307: Cannot find module '../src/SimpleAccountABI' or its corresponding type declarations.
+```
+
 Start the hardhat fork:
 ```
 cd localfork
-
+yarn install 
 npx hardhat node --fork "https://eth-mainnet.g.alchemy.com/v2/lcA7Kyqv42J1Qh-wLm__DdqSCJBtZyd1"
 ```
 
@@ -13,22 +24,12 @@ npx hardhat node --fork "https://eth-mainnet.g.alchemy.com/v2/lcA7Kyqv42J1Qh-wLm
 
 
 Starting point: `/AA-Bundler`
-#### Install packages
 
-```
-yarn && yarn preprocess
-```
 
-Ignore this error
-
-```javascript
-Error: test/Flow.test.ts(7,30): error TS2307: Cannot find module '../src/SimpleAccountABI' or its corresponding type declarations.
-```
 #### Run setup and deploy bundler
 
 ```
 cd localfork
-yarn install 
 chmod +x setup.sh
 ./setup.sh
 ```
