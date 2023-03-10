@@ -119,6 +119,7 @@ export class BundlerServer {
         res.send({
           currency: 'ETH',
           rpcdata: { bundlerUrl: `${LOCALHOST_URL}rpc` },
+          chain: '31337',
           aaData: {
             entryPointAddress: forkConfig.entryPointAddress,
             factoryAddress: forkConfig.factoryAddress,
@@ -138,7 +139,8 @@ export class BundlerServer {
               univ3router: forkConfig.uniswapV3RouterAddress,
               tokenSwapAddress: forkConfig.tokenSwapAddress,
             }
-          }
+          },
+          key: 'ethereum-localfork'
         })
       }
       else {
