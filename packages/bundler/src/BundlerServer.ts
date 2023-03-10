@@ -12,7 +12,7 @@ import { UserOpMethodHandler } from './UserOpMethodHandler'
 import { Server } from 'http'
 import { RpcError } from './utils'
 const forkConfig = require('../../../localfork/forkConfig.json')
-const { LOCALHOST_URL, HARDHAT_FORK_CHAIN_ID_STRING } = require('../../../localfork/ForkUtils')
+const { LOCALHOST_URL, HARDHAT_FORK_CHAIN_ID_STRING, HARDHAT_FORK_CHAIN_KEY } = require('../../../localfork/ForkUtils')
 
 export class BundlerServer {
   app: Express
@@ -115,7 +115,7 @@ export class BundlerServer {
       chain
     } = req.body
     try {
-      if (chain === HARDHAT_FORK_CHAIN_ID_STRING) {
+      if (chain === HARDHAT_FORK_CHAIN_ID_STRING || chain === HARDHAT_FORK_CHAIN_KEY) {
         res.send({
           currency: 'ETH',
           rpcdata: { bundlerUrl: `${LOCALHOST_URL}rpc` },
