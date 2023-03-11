@@ -29,8 +29,6 @@ Starting point: `/AA-Bundler`
 #### Run setup and deploy bundler
 
 ```
-cd localfork
-chmod +x setup.sh
 ./setup.sh
 ```
 
