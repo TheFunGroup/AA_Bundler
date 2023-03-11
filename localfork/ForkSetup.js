@@ -275,8 +275,8 @@ const moveFile = (path) => {
         console.log("SUCCESS: ", fileName)
     }
     catch (e) {
-        console.log(e)
-        console.log("ERROR: ", fileName)
+        // console.log(e)
+        // console.log("ERROR: ", fileName)
     }
 }
 
